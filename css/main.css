@@ -10693,15 +10693,15 @@ header #desktop_header #header_part_one {
 }
 header #desktop_header #header_part_one .header-one-link {
   color: #FFFFFF;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
 }
 header #desktop_header #header_part_one .header-one-link:not(:last-child) {
   border-right: 2px solid #747474;
-  padding-right: 30px;
+  padding-right: 33px;
 }
 header #desktop_header #header_part_one .header-one-link:not(:first-child) {
-  padding-left: 30px;
+  padding-left: 33px;
 }
 header #desktop_header #header_part_two {
   padding: 24px 20px;
@@ -10759,6 +10759,7 @@ header #desktop_header #header_part_two .main-header #desktop_search_form .input
   font-weight: 400;
   border-radius: 5px;
   padding: 9px 35px 9px 20px;
+  min-width: 370px;
 }
 header #desktop_header #header_part_two .main-header #desktop_search_form .input-container input::placeholder {
   color: #B1B1B1;
@@ -10784,6 +10785,11 @@ header #desktop_header #header_part_two .main-header #desktop_search_form .input
 header #desktop_header #header_part_two .main-header .desktop-logo-container {
   width: 280px;
   height: 100px;
+  position: relative;
+  left: 6%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 header #desktop_header #header_part_two .main-header .desktop-logo-container img {
   width: 100%;
@@ -10845,14 +10851,14 @@ header #desktop_header #header_part_two .main-header .desktop-icons-container .i
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
   background: #FFFFFF;
   min-width: 400px;
-  max-height: 450px;
+  max-height: 551px;
   padding: 32px 40px;
   position: absolute;
   right: 0;
   top: 50px;
 }
 header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container {
-  max-height: calc(450px - 92px);
+  max-height: calc(551px - 92px);
   overflow: auto;
 }
 header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container::-webkit-scrollbar {
@@ -10907,7 +10913,7 @@ header #desktop_header #header_part_two .main-header .desktop-icons-container .i
   color: #000000;
 }
 header #desktop_header #header_part_three {
-  padding: 32px;
+  padding: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10937,7 +10943,7 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   content: "";
   position: absolute;
   left: 0;
-  height: 2px;
+  height: 1px;
   width: 100%;
   background: #000000;
   bottom: -4px;

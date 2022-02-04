@@ -8,14 +8,14 @@ header {
             justify-content: center;
             .header-one-link {
                 color: $color-white;
-                font-size: 15px;
-                font-weight: 700;
+                font-size: 12px;
+                font-weight: 600;
                 &:not(:last-child) {
                     border-#{$end-direction}: 2px solid $color-grey-1;
-                    padding-#{$end-direction}: 30px;
+                    padding-#{$end-direction}: 33px;
                 }
                 &:not(:first-child) {
-                    padding-#{$start-direction}: 30px;
+                    padding-#{$start-direction}: 33px;
                 }
             }
         }
@@ -75,6 +75,7 @@ header {
                             font-weight: 400;
                             border-radius: 5px;
                             padding: 9px 35px 9px 20px;
+                            min-width: 370px;
                             &::placeholder {
                                 color: $color-grey-4;
                                 font-size: 15px;
@@ -98,6 +99,9 @@ header {
                 .desktop-logo-container {
                     width: 280px;
                     height: 100px;
+                    position: relative;
+                    #{$start-direction}: 6%;
+                    @include transform(translateX(-50% * $transform-direction));
                     img {
                         width: 100%;
                         height: 100%;
@@ -159,13 +163,13 @@ header {
                             @include boxShadow(2px 2px 1px rgba($color-black, 0.25));
                             background: $color-white;
                             min-width: 400px;
-                            max-height: 450px;
+                            max-height: 551px;
                             padding: 32px 40px;
                             position: absolute;
                             #{$end-direction}: 0;
                             top: 50px;
                             .items-container {
-                                max-height: calc(450px - 92px);
+                                max-height: calc(551px - 92px);
                                 overflow: auto;
                                 &::-webkit-scrollbar {
                                     width: 0px;
@@ -227,7 +231,7 @@ header {
         // end header part two        
         // header part three
         #header_part_three {
-            padding: 32px;
+            padding: 19px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -253,7 +257,7 @@ header {
                             content: "";
                             position: absolute;
                             #{$start-direction}: 0;
-                            height: 2px;
+                            height: 1px;
                             width: 100%;
                             background: $color-black;
                             bottom: -4px;
