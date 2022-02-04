@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="26.5" viewBox="0 0 52 26.5">
+  <defs>
+    <clipPath id="clip-iPhone_13_12_Pro_1">
+      <rect width="52" height="26.5"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_13_12_Pro_1" data-name="iPhone 13, 12 Pro – 1" clip-path="url(#clip-iPhone_13_12_Pro_1)">
+    <g id="ShoppingCartSimple_1_" data-name="ShoppingCartSimple (1)" transform="translate(0.001 0.616)">
+      <path id="Path_5187" data-name="Path 5187" d="M10.1,26.267a2.021,2.021,0,1,0-2.021-2.021A2.021,2.021,0,0,0,10.1,26.267Z" transform="translate(-0.925 -1.267)" fill="#806543"/>
+      <path id="Path_5188" data-name="Path 5188" d="M23.235,26.267a2.021,2.021,0,1,0-2.021-2.021A2.021,2.021,0,0,0,23.235,26.267Z" transform="translate(-3 -1.267)" fill="#806543"/>
+      <path id="Path_5189" data-name="Path 5189" d="M4.85,5.7H25l-2.965,10.86a1.884,1.884,0,0,1-.646.985,1.745,1.745,0,0,1-1.082.379H9.542a1.745,1.745,0,0,1-1.082-.379,1.885,1.885,0,0,1-.646-.985L3.752,1.682a.942.942,0,0,0-.323-.492A.872.872,0,0,0,2.888,1H1" transform="translate(0)" fill="none" stroke="#806543" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="ShoppingCartSimple" transform="translate(26.001 0.616)">
+      <path id="Path_5190" data-name="Path 5190" d="M10.1,26.267a2.021,2.021,0,1,0-2.021-2.021A2.021,2.021,0,0,0,10.1,26.267Z" transform="translate(-0.925 -1.267)" fill="#665d90"/>
+      <path id="Path_5191" data-name="Path 5191" d="M23.235,26.267a2.021,2.021,0,1,0-2.021-2.021A2.021,2.021,0,0,0,23.235,26.267Z" transform="translate(-3 -1.267)" fill="#665d90"/>
+      <path id="Path_5192" data-name="Path 5192" d="M4.85,5.7H25l-2.965,10.86a1.884,1.884,0,0,1-.646.985,1.745,1.745,0,0,1-1.082.379H9.542a1.745,1.745,0,0,1-1.082-.379,1.885,1.885,0,0,1-.646-.985L3.752,1.682a.942.942,0,0,0-.323-.492A.872.872,0,0,0,2.888,1H1" transform="translate(0)" fill="#665d90"/>
+      <path id="Path_5193" data-name="Path 5193" d="M4.85,5.7H25l-2.965,10.86a1.884,1.884,0,0,1-.646.985,1.745,1.745,0,0,1-1.082.379H9.542a1.745,1.745,0,0,1-1.082-.379,1.885,1.885,0,0,1-.646-.985L3.752,1.682a.942.942,0,0,0-.323-.492A.872.872,0,0,0,2.888,1H1" transform="translate(0)" fill="none" stroke="#665d90" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="26" viewBox="0 0 52 26">
+  <defs>
+    <clipPath id="clip-iPhone_13_12_Pro_1">
+      <rect width="52" height="26"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_13_12_Pro_1" data-name="iPhone 13, 12 Pro – 1" clip-path="url(#clip-iPhone_13_12_Pro_1)">
+    <path id="Vector" d="M13,25S1,17.364,1,8.091A7.709,7.709,0,0,1,2.414,3.6a6.158,6.158,0,0,1,3.6-2.458,5.587,5.587,0,0,1,4.156.692A6.844,6.844,0,0,1,13,5.359h0A6.844,6.844,0,0,1,15.829,1.83a5.587,5.587,0,0,1,4.156-.692,6.158,6.158,0,0,1,3.6,2.458A7.709,7.709,0,0,1,25,8.091C25,17.364,13,25,13,25Z" transform="translate(0 0)" fill="none" stroke="#33266e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Vector-2" data-name="Vector" d="M13,25S1,17.364,1,8.091A7.709,7.709,0,0,1,2.414,3.6a6.158,6.158,0,0,1,3.6-2.458,5.587,5.587,0,0,1,4.156.692A6.844,6.844,0,0,1,13,5.359h0A6.844,6.844,0,0,1,15.828,1.83a5.587,5.587,0,0,1,4.156-.692,6.158,6.158,0,0,1,3.6,2.458A7.709,7.709,0,0,1,25,8.091C25,17.364,13,25,13,25Z" transform="translate(26.001 0)" fill="#665d90" stroke="#665d90" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
