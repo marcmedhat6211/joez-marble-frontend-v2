@@ -10685,4 +10685,343 @@ a:hover {
   text-decoration: none;
 }
 
+header #desktop_header #header_part_one {
+  background: #000000;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+header #desktop_header #header_part_one .header-one-link {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 700;
+}
+header #desktop_header #header_part_one .header-one-link:not(:last-child) {
+  border-right: 2px solid #747474;
+  padding-right: 30px;
+}
+header #desktop_header #header_part_one .header-one-link:not(:first-child) {
+  padding-left: 30px;
+}
+header #desktop_header #header_part_two {
+  padding: 24px 20px;
+  border-bottom: 1px solid #C8C8C8;
+}
+header #desktop_header #header_part_two .quick-access-links-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+header #desktop_header #header_part_two .quick-access-links-container .pages-links {
+  display: flex;
+  align-items: center;
+  margin-right: 19px;
+}
+header #desktop_header #header_part_two .quick-access-links-container .pages-links .quick-access-link {
+  font-size: 15px;
+  font-weight: 400;
+  color: #A4A4A4;
+  text-decoration: underline;
+}
+header #desktop_header #header_part_two .quick-access-links-container .pages-links .quick-access-link.active {
+  color: #000000;
+}
+header #desktop_header #header_part_two .quick-access-links-container .pages-links .quick-access-link:not(:last-child) {
+  border-right: 1px solid #000000;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+header #desktop_header #header_part_two .quick-access-links-container .country-btn {
+  padding: 0;
+  width: 21px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #desktop_header #header_part_two .quick-access-links-container .country-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+header #desktop_header #header_part_two .main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header #desktop_header #header_part_two .main-header #desktop_search_form .input-container {
+  position: relative;
+}
+header #desktop_header #header_part_two .main-header #desktop_search_form .input-container input {
+  border: 1px solid #CACACA;
+  color: #B1B1B1;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 9px 35px 9px 20px;
+}
+header #desktop_header #header_part_two .main-header #desktop_search_form .input-container input::placeholder {
+  color: #B1B1B1;
+  font-size: 15px;
+  font-weight: 400;
+}
+header #desktop_header #header_part_two .main-header #desktop_search_form .input-container input:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+header #desktop_header #header_part_two .main-header #desktop_search_form .input-container .search-icon {
+  color: #B0B0B0;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 20px;
+}
+header #desktop_header #header_part_two .main-header .desktop-logo-container {
+  width: 280px;
+  height: 100px;
+}
+header #desktop_header #header_part_two .main-header .desktop-logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container {
+  display: flex;
+  align-items: center;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container {
+  position: relative;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container:not(:last-child) {
+  margin-right: 52px;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .icon-btn {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .icon-btn .icon {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .icon-btn .icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  height: 3px;
+  width: 100%;
+  background: #000000;
+  display: none;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .icon-btn .icon svg {
+  width: 100%;
+  height: 100%;
+  color: #000000;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .icon-btn .items-count {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 6px;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .icon-btn:hover .icon::after {
+  display: block;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .icon-btn.active .icon::after {
+  display: block;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown {
+  z-index: 10;
+  border: 1px solid #CCCCCC;
+  -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+  background: #FFFFFF;
+  min-width: 400px;
+  max-height: 450px;
+  padding: 32px 40px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container {
+  max-height: calc(450px - 92px);
+  overflow: auto;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  display: none;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item .item-img-container {
+  width: 100px;
+  height: 100px;
+  margin-right: 13px;
+  flex-shrink: 0;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item .item-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item .item-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item .item-details-container .item-text-container {
+  margin-bottom: 32px;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item .item-details-container .item-text-container .item-title,
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item .item-details-container .item-text-container .item-quantity {
+  font-size: 10px;
+  color: #000000;
+  margin-bottom: 4px;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item .item-details-container .item-text-container .item-quantity {
+  margin-bottom: 0;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item .item-details-container .price-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .items-dropdown .items-container .item .item-details-container .price-btn-container .item-price {
+  font-size: 10px;
+  color: #000000;
+}
+header #desktop_header #header_part_three {
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #desktop_header #header_part_three .header-three-items-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item {
+  list-style: none;
+  position: static;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .item-text {
+  cursor: pointer;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 500;
+  position: relative;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .item-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #000000;
+  bottom: -4px;
+  display: none;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .item-text:hover, header #desktop_header #header_part_three .header-three-items-container .header-three-item .item-text.active {
+  color: #665D90;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .item-text:hover::after, header #desktop_header #header_part_three .header-three-items-container .header-three-item .item-text.active::after {
+  display: block;
+  background: #665D90;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown {
+  background: #FFFFFF;
+  z-index: 10;
+  border: 1px solid #CCCCCC;
+  padding: 24px 28px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 35px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-links-container .link {
+  display: block;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  width: fit-content;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-links-container .link:not(:last-child) {
+  margin-bottom: 14px;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-links-container .link:last-child {
+  text-decoration: underline;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-links-container .link::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0px;
+  background: #000000;
+  width: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-links-container .link:not(:last-child):hover::after {
+  width: 100%;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-imgs-links-container {
+  display: flex;
+  align-items: center;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-imgs-links-container .img-link {
+  width: 335px;
+  height: 400px;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-imgs-links-container .img-link:not(:last-child) {
+  margin-right: 10px;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-imgs-links-container .img-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn.btn-style-1 {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #000000;
+  padding: 6px 19px;
+  border-radius: 0;
+}
+
 /*# sourceMappingURL=main.css.map */

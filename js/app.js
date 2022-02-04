@@ -1,3 +1,7 @@
+var desktopHeader = $("header #desktop_header");
+var desktopHeaderPartOne = desktopHeader.find("#header_part_one");
+var desktopHeaderPartTwo = desktopHeader.find("#header_part_two");
+var desktopHeaderPartThree = desktopHeader.find("#header_part_three");
 $(document).ready(function() {
     //lazy loading
     if ($("img.lazy").length > 0) {
@@ -5,6 +9,47 @@ $(document).ready(function() {
             effect: "fadeIn",
         });
     }
+
+    // header part two dropdowns
+    desktopHeaderPartTwo.find(".icon-container").each(function() {
+        let $this = $(this);
+        let iconBtn = $this.find(".icon-btn");
+        let iconDropdown = $this.find(".icon-dropdown");
+        $this.on({
+            mouseenter: function() {
+                iconDropdown.removeClass("d-none");
+                iconBtn.addClass("active");
+            },
+            mouseleave: function() {
+                setTimeout(() => {
+                    if ($this.find(".icon-dropdown:hover").length == 0) {
+                        iconDropdown.addClass("d-none");
+                        iconBtn.removeClass("active");
+                    }
+                }, 100);
+            }
+        })
+    });
+
+    // header part three dropdowns
+    desktopHeaderPartThree.find(".header-three-item").each(function() {
+        let $this = $(this);
+        let itemDropdown = $this.find(".header-three-dropdown");
+        $this.on({
+            mouseenter: function() {
+                itemDropdown.removeClass("d-none");
+                $this.addClass("active");
+            },
+            mouseleave: function() {
+                setTimeout(() => {
+                    if ($this.find(".header-three-dropdown:hover").length == 0) {
+                        itemDropdown.addClass("d-none");
+                        $this.removeClass("active");
+                    }
+                }, 100);
+            }
+        })
+    });
 
     // svg icons
     $("i.convert-svg").each(function() {
