@@ -10949,6 +10949,11 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   color: #000000;
   font-weight: 500;
   position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 header #desktop_header #header_part_three .header-three-items-container .header-three-item .item-text::after {
   content: "";
@@ -10959,6 +10964,11 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   background: #000000;
   bottom: -4px;
   display: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 header #desktop_header #header_part_three .header-three-items-container .header-three-item .item-text:hover, header #desktop_header #header_part_three .header-three-items-container .header-three-item .item-text.active {
   color: #665D90;
@@ -10982,6 +10992,23 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-links-container {
+  position: relative;
+}
+header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-links-container.animate {
+  animation: dropdown_links_animation 0.4s;
 }
 header #desktop_header #header_part_three .header-three-items-container .header-three-item .header-three-dropdown .dropdown-links-container .link {
   display: block;
@@ -11032,6 +11059,14 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   object-fit: cover;
 }
 
+@keyframes dropdown_links_animation {
+  from {
+    left: 3%;
+  }
+  to {
+    left: 0;
+  }
+}
 #back_to_top_btn {
   position: fixed;
   bottom: 12px;

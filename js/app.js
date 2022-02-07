@@ -35,16 +35,19 @@ $(document).ready(function() {
     desktopHeaderPartThree.find(".header-three-item").each(function() {
         let $this = $(this);
         let itemDropdown = $this.find(".header-three-dropdown");
+        let itemLinksContainer = itemDropdown.find(".dropdown-links-container");
         $this.on({
             mouseenter: function() {
-                itemDropdown.removeClass("d-none");
+                itemDropdown.addClass("show");
                 $this.addClass("active");
+                itemLinksContainer.addClass("animate");
             },
             mouseleave: function() {
                 setTimeout(() => {
                     if ($this.find(".header-three-dropdown:hover").length == 0) {
-                        itemDropdown.addClass("d-none");
+                        itemDropdown.removeClass("show");
                         $this.removeClass("active");
+                        itemLinksContainer.removeClass("animate");
                     }
                 }, 100);
             }

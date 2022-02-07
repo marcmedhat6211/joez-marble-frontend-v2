@@ -253,6 +253,7 @@ header {
                         color: $color-black;
                         font-weight: 500;
                         position: relative;
+                        @include transition(all .2s ease-in-out);
                         &::after {
                             content: "";
                             position: absolute;
@@ -262,6 +263,7 @@ header {
                             background: $color-black;
                             bottom: -4px;
                             display: none;
+                            @include transition(all .2s ease-in-out);
                         }
                         &:hover,
                         &.active {
@@ -285,7 +287,18 @@ header {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        opacity: 0;
+                        visibility: hidden;
+                        @include transition(all .2s ease-in-out);
+                        &.show {
+                            opacity: 1;
+                            visibility: visible;
+                        }
                         .dropdown-links-container {
+                            position: relative;
+                            &.animate {
+                                animation: dropdown_links_animation .4s;
+                            }
                             .link {
                                 display: block;
                                 color: $color-black;
@@ -336,5 +349,14 @@ header {
             }
         }
         // end header part three
+    }
+}
+
+@keyframes dropdown_links_animation {
+    from {
+        #{$start-direction}: 3%;
+    }
+    to {
+        #{$start-direction}: 0;
     }
 }
