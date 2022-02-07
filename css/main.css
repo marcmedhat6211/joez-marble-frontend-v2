@@ -11125,6 +11125,11 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   margin-right: 14px;
 }
 .pagination.pagination-style-1 .pagination .page-item .page-link {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   font-size: 16px;
   background: transparent;
   border: none;
