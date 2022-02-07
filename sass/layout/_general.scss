@@ -18,3 +18,14 @@ a {
 a:hover {
     text-decoration: none;
 }
+
+img {
+    background: $color-grey-8;
+}
+
+.page-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: $color-black;
+    margin-bottom: 0;
+}

@@ -1,0 +1,74 @@
+.pagination.pagination-style-1 {
+    .pagination {
+        margin: 0;
+        .page-item {
+            border: 2px solid $color-black;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include transition(all .2s ease-in-out);
+            &:not(:last-child) {
+                margin-#{$end-direction}: 14px;
+            }
+            .page-link {
+                font-size: 16px;
+                background: transparent;
+                border: none;
+                color: $color-black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 600;
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            &.active {
+                background: $color-black;
+                .page-link {
+                    color: $color-white;
+                }
+            }
+            &:hover {
+                &:not(.disabled) {
+                    background: $color-black;
+                    .page-link {
+                        color: $color-white;
+                    }
+                }
+            }
+            &.disabled {
+                background: rgba($color-black, .1);
+                border-color: rgba($color-black, .1);
+                .page-link {
+                    color: rgba($color-black, .1);
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .pagination.pagination-style-1 {
+        .pagination {
+            .page-item {
+                width: 40px;
+                height: 40px;
+                &:not(:last-child) {
+                    margin-#{$end-direction}: 12px;
+                }
+                .page-link {
+                    font-size: 14px;
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

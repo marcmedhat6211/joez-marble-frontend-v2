@@ -5,4 +5,15 @@
     border: 1px solid $color-black;
     padding: 6px 19px;
     border-radius: 0;
+    &.bg-black {
+        background: $color-black;
+        color: $color-white;
+        border: none;
+    }
+}
+
+@include media-breakpoint-md {
+    .btn.btn-style-1 {
+        font-size: 12px;
+    }
 }

@@ -51,6 +51,11 @@ $(document).ready(function() {
         })
     });
 
+    // back to top btn
+    $("#back_to_top_btn").on("click", function() {
+        $("html, body").animate({ scrollTop: 0 }, 1000);
+    });
+
     // svg icons
     $("i.convert-svg").each(function() {
         var $img = $(this);
