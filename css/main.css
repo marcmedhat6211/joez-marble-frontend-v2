@@ -10797,7 +10797,7 @@ header #desktop_header #header_part_two .main-header .desktop-logo-container {
   width: 280px;
   height: 100px;
   position: relative;
-  left: 6%;
+  left: 4%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -11225,6 +11225,134 @@ header #desktop_header #header_part_three .header-three-items-container .header-
 }
 #wishlist_page .item-main-container .item-container .item-details .item-btns .btn:first-child {
   margin-right: 16px;
+}
+
+#about_us_page .page-header-container {
+  background: #000000;
+  height: 340px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about_us_page .page-header-container .header-text-container {
+  position: relative;
+}
+#about_us_page .page-header-container .header-text-container .page-title {
+  font-size: 52px;
+  color: #FFFFFF;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+#about_us_page .page-header-container .header-text-container .header-subtitle {
+  font-size: 35px;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+#about_us_page .page-header-container .header-text-container::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 1px;
+  width: 80%;
+  background: rgba(235, 235, 235, 0.56);
+}
+#about_us_page .section-container:not(:last-child) {
+  margin-bottom: 150px;
+  position: relative;
+}
+#about_us_page .section-container:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  background-image: url("../images/pages/about-us/section-line.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  bottom: -180px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#about_us_page .section-container:not(:last-child):nth-child(2)::after {
+  -webkit-transform: translateX(-50%) scaleX(-1);
+  -webkit-transform: translateX(-50%) scaleX(-1);
+  -ms-transform: translateX(-50%) scaleX(-1);
+  transform: translateX(-50%) scaleX(-1);
+}
+#about_us_page .section-container .img-container {
+  max-width: 610px;
+  height: 420px;
+}
+#about_us_page .section-container .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#about_us_page .section-container .section-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 39px;
+}
+#about_us_page .section-container .section-description {
+  font-size: 24px;
+  font-weight: 500;
+  color: #595959;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  #about_us_page .page-header-container {
+    height: 300px;
+    padding: 16px;
+  }
+  #about_us_page .page-header-container .header-text-container .page-title {
+    font-size: 30px;
+  }
+  #about_us_page .page-header-container .header-text-container .header-subtitle {
+    font-size: 24px;
+  }
+  #about_us_page .page-header-container .header-text-container::after {
+    bottom: -16px;
+  }
+  #about_us_page .section-container:not(:last-child) {
+    margin-bottom: 50px;
+    position: relative;
+  }
+  #about_us_page .section-container:not(:last-child)::after {
+    display: none;
+  }
+  #about_us_page .section-container:not(:last-child):nth-child(2)::after {
+    -webkit-transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  #about_us_page .section-container:first-child .img-container:last-child {
+    margin-bottom: 30px;
+  }
+  #about_us_page .section-container:nth-child(2) .section-description {
+    margin-bottom: 30px;
+  }
+  #about_us_page .section-container .img-container {
+    max-width: 100%;
+    height: 300px;
+  }
+  #about_us_page .section-container .section-title {
+    font-size: 25px;
+    margin-bottom: 24px;
+  }
+  #about_us_page .section-container .section-description {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

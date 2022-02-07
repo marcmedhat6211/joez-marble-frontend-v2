@@ -100,7 +100,7 @@ header {
                     width: 280px;
                     height: 100px;
                     position: relative;
-                    #{$start-direction}: 6%;
+                    #{$start-direction}: 4%;
                     @include transform(translateX(-50% * $transform-direction));
                     img {
                         width: 100%;
