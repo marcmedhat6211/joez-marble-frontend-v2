@@ -5,10 +5,18 @@
     border: 1px solid $color-black;
     padding: 6px 19px;
     border-radius: 0;
+    @include transition(all .2s ease-in-out);
     &.bg-black {
         background: $color-black;
         color: $color-white;
         border: none;
+    }
+    &.hover-effect {
+        &:hover {
+            background: $color-black;
+            color: $color-white;
+        }
+        &.bg-black {}
     }
 }
 

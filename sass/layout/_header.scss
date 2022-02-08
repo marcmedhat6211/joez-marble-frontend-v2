@@ -76,6 +76,7 @@ header {
                             border-radius: 5px;
                             padding: 9px 35px 9px 20px;
                             min-width: 370px;
+                            @include transition(all .2s ease-in-out);
                             &::placeholder {
                                 color: $color-grey-4;
                                 font-size: 15px;
@@ -83,6 +84,9 @@ header {
                             }
                             &:focus {
                                 @include boxShadow(none);
+                            }
+                            &.active {
+                                border-color: $color-black;
                             }
                         }
                         .search-icon {
@@ -92,7 +96,16 @@ header {
                             position: absolute;
                             top: 50%;
                             @include transform(translateY(-50% * $transform-direction));
+                            @include transition(all .2s ease-in-out);
                             #{$end-direction}: 20px;
+                        }
+                        &.active {
+                            input {
+                                border-color: $color-black;
+                            }
+                            .search-icon {
+                                color: $color-black;
+                            }
                         }
                     }
                 }
@@ -127,7 +140,8 @@ header {
                                 &::after {
                                     content: "";
                                     position: absolute;
-                                    left: 0;
+                                    #{$start-direction}: 50%;
+                                    @include transform(translateX(-50% * $transform-direction));
                                     bottom: -9px;
                                     height: 3px;
                                     width: 100%;
@@ -221,6 +235,14 @@ header {
                                             }
                                         }
                                     }
+                                }
+                            }
+                        }
+                        &:nth-child(3) {
+                            .icon-btn {
+                                .icon::after {
+                                    width: 55%;
+                                    #{$start-direction}: 56%;
                                 }
                             }
                         }

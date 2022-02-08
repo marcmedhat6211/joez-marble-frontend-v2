@@ -1,0 +1,14 @@
+.badge.badge-style-1 {
+    height: 37px;
+    border-radius: 0;
+    padding: 10px 34px;
+    background: $color-grey-8;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    span {
+        color: $color-white;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}

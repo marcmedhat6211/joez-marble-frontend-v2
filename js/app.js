@@ -59,6 +59,23 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: 0 }, 1000);
     });
 
+    //search bar active state
+    desktopHeaderPartTwo.find("#desktop_search_form .input-container input").on("focus", function() {
+        $(this).closest(".input-container").addClass("active");
+    });
+    $(document).on("click", function(e) {
+        var searchBarInputContainer = desktopHeaderPartTwo.find("#desktop_search_form .input-container");
+        var searchBarInput = searchBarInputContainer.find("input");
+        if (searchBarInput.val() == "" &&
+            !(
+                $(e.target).is("#desktop_search_form .input-container") ||
+                $(e.target).is("#desktop_search_form .input-container *")
+            )
+        ) {
+            searchBarInputContainer.removeClass("active");
+        }
+    });
+
     // svg icons
     $("i.convert-svg").each(function() {
         var $img = $(this);

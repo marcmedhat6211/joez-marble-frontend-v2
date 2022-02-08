@@ -78,6 +78,16 @@
     }
 }
 
+@include media-breakpoint-xl {
+    #about_us_page {
+        .section-container {
+            .section-description {
+                font-size: 26px;
+            }
+        }
+    }
+}
+
 @include media-breakpoint-md {
     #about_us_page {
         .page-header-container {
