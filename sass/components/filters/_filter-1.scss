@@ -1,0 +1,88 @@
+.filter.filter-style-1 {
+    background: transparent;
+    padding: 40px 60px;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    .current-main-filter {
+        color: $color-black;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 32px;
+    }
+    .filter-link {
+        display: block;
+        color: black;
+        font-size: 15px;
+        font-weight: 400;
+        white-space: nowrap;
+        @include transition(all .2s ease-in-out);
+        position: relative;
+        width: fit-content;
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                position: absolute;
+                @include transition(all .2s ease-in-out);
+                bottom: -1px;
+                #{$start-direction}: 0;
+                background: $color-black;
+                width: 0;
+                height: 1px;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+        &:last-child {
+            text-decoration: underline;
+        }
+        &.active {
+            font-weight: 700;
+        }
+        &:hover:not(:last-child) {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .filter.filter-style-1 {
+        background: rgba($color-black, .2) !important;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background: transparent;
+        // height: 100px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        position: -webkit-sticky;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+            display: none;
+        }
+        .current-main-filter {
+            font-size: 22px;
+            margin-bottom: 0;
+            margin-right: 12px;
+        }
+        .filter-link {
+            font-size: 14px;
+            @include transition(all .2s ease-in-out);
+            position: relative;
+            width: fit-content;
+            &::after {
+                display: none;
+            }
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-#{$end-direction}: 12px;
+            }
+        }
+    }
+}

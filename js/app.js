@@ -2,6 +2,7 @@ var desktopHeader = $("header #desktop_header");
 var desktopHeaderPartOne = desktopHeader.find("#header_part_one");
 var desktopHeaderPartTwo = desktopHeader.find("#header_part_two");
 var desktopHeaderPartThree = desktopHeader.find("#header_part_three");
+var productCard = $(".card.card-style-1");
 $(document).ready(function() {
     //lazy loading
     if ($("img.lazy").length > 0) {
@@ -75,6 +76,23 @@ $(document).ready(function() {
             searchBarInputContainer.removeClass("active");
         }
     });
+
+    // fav icon on product card
+    if (productCard.length > 0) {
+        if (productCard.length > 1) {
+            productCard.each(function() {
+                $(this).find(".fav-btn").on("click", function(e) {
+                    e.preventDefault();
+                    $(this).toggleClass("active");
+                });
+            });
+        } else {
+            productCard.find(".fav-btn").on("click", function(e) {
+                e.preventDefault();
+                $(this).toggleClass("active");
+            });
+        }
+    }
 
     // svg icons
     $("i.convert-svg").each(function() {

@@ -177,7 +177,7 @@ header {
                             @include boxShadow(2px 2px 1px rgba($color-black, 0.25));
                             background: $color-white;
                             min-width: 400px;
-                            max-height: 551px;
+                            max-height: 581px;
                             padding: 32px 40px;
                             position: absolute;
                             #{$end-direction}: 0;
@@ -185,6 +185,7 @@ header {
                             .items-container {
                                 max-height: calc(551px - 92px);
                                 overflow: auto;
+                                margin-bottom: 20px;
                                 &::-webkit-scrollbar {
                                     width: 0px;
                                     background: transparent;

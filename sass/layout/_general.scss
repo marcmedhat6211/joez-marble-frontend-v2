@@ -29,3 +29,31 @@ img {
     color: $color-black;
     margin-bottom: 0;
 }
+
+.has-active-icon {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    &.fav-btn {
+        background-image: url(../images/icons/fav-icon.svg);
+        background-size: 42px 26px;
+        background-position: left;
+        background-repeat: no-repeat;
+        &.active {
+            background-position: right;
+        }
+    }
+}
+
+.pt-20 {
+    padding-top: 90px;
+}
+
+@include media-breakpoint-md {
+    .pt-20 {
+        padding-top: 0;
+    }
+}
