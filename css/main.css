@@ -11220,7 +11220,7 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   align-items: center;
 }
 .card.card-style-1 .card-img-container {
-  width: 225px;
+  width: 100%;
   height: 225px;
   position: relative;
   margin-bottom: 15px;
