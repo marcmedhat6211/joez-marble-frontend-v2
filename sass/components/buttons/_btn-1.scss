@@ -6,6 +6,7 @@
     padding: 6px 19px;
     border-radius: 0;
     @include transition(all .2s ease-in-out);
+    width: fit-content;
     &.bg-black {
         background: $color-black;
         color: $color-white;

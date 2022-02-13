@@ -1,0 +1,27 @@
+.products-list-section {
+    padding-#{$start-direction}: 10px;
+    padding-#{$end-direction}: 10px;
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-#{$end-direction}: -10px;
+        margin-#{$start-direction}: -10px;
+        .card {
+            width: 20% !important;
+            padding-#{$end-direction}: 10px;
+            padding-#{$start-direction}: 10px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .products-list-section {
+        .products-container {
+            .card {
+                width: 50% !important;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
