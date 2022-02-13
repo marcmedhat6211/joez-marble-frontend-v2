@@ -11769,5 +11769,48 @@ header #desktop_header #header_part_three .header-three-items-container .header-
     justify-content: center !important;
   }
 }
+#services_page .service-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 4px solid #665D90;
+  padding-top: 43px;
+}
+#services_page .service-container .service-title {
+  font-size: 25px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 40px;
+}
+#services_page .service-container.has-price-info .service-title {
+  margin-bottom: 4px;
+}
+#services_page .service-container .service-price {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 20px;
+}
+#services_page .service-container .service-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 40px;
+}
+#services_page .service-container .service-description {
+  font-size: 12px;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 991.98px) {
+  #services_page .service-container {
+    padding-top: 22px;
+  }
+  #services_page .service-container .service-title {
+    font-size: 22px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
