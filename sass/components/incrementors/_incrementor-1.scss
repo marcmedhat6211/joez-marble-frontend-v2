@@ -1,0 +1,112 @@
+.incrementor.incrementor-style-1 {
+    .incrementor-title {
+        font-size: 12px;
+        font-weight: 400;
+        color: $color-black;
+        margin-bottom: 32px;
+    }
+    .incrementor-container {
+        display: flex;
+        width: 170px;
+        height: 37px;
+        border: 2px solid $color-black;
+        .btn {
+            height: 100%;
+            width: 43px;
+            border-radius: 0;
+            padding: 0;
+            background: $color-white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include transition(all .2s ease-in-out);
+            svg {
+                @include transition(all .2s ease-in-out);
+                width: 21px;
+                height: 21px;
+                color: $color-black;
+            }
+            &.plus {
+                border-#{$start-direction}: 2px solid $color-black;
+            }
+            &.minus {
+                border-#{$end-direction}: 2px solid $color-black;
+            }
+            &:hover {
+                background: $color-black;
+                svg {
+                    color: $color-white;
+                }
+            }
+        }
+        input[name="qty"] {
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            width: 100%;
+            text-align: center;
+            border: none;
+            &:focus-visible {
+                outline: none;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .incrementor.incrementor-style-1 {
+        .incrementor-title {
+            display: none;
+        }
+        .incrementor-container {
+            display: flex;
+            width: 170px;
+            height: 37px;
+            border: 2px solid $color-black;
+            .btn {
+                height: 100%;
+                width: 43px;
+                border-radius: 0;
+                padding: 0;
+                background: $color-white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include transition(all .2s ease-in-out);
+                svg {
+                    @include transition(all .2s ease-in-out);
+                    width: 21px;
+                    height: 21px;
+                    color: $color-black;
+                }
+                &.plus {
+                    border-#{$start-direction}: 2px solid $color-black;
+                }
+                &.minus {
+                    border-#{$end-direction}: 2px solid $color-black;
+                }
+                &:hover {
+                    background: $color-black;
+                    svg {
+                        color: $color-white;
+                    }
+                }
+            }
+            input[name="qty"] {
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                width: 100%;
+                text-align: center;
+                border: none;
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+    }
+}

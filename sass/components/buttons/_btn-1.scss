@@ -10,14 +10,18 @@
     &.bg-black {
         background: $color-black;
         color: $color-white;
-        border: none;
     }
     &.hover-effect {
         &:hover {
             background: $color-black;
             color: $color-white;
         }
-        &.bg-black {}
+        &.bg-black {
+            &:hover {
+                background: $color-white;
+                color: $color-black;
+            }
+        }
     }
 }
 
