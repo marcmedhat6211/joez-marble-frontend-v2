@@ -1,0 +1,94 @@
+.account-form-container {
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 16px;
+    @include boxShadow(0px 4px 4px rgba($color-black, 0.25));
+    .form-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .form-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: $color-black;
+            margin-bottom: 18px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .blue-link {
+            color: $color-blue;
+            text-decoration: underline;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            align-self: flex-start;
+        }
+        .btn.btn-style-4 {
+            margin-bottom: 16px;
+        }
+        .btn.btn-style-5:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        .btn.btn-style-5:last-child {
+            margin-bottom: 35px;
+        }
+        .other-option-text {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            span {
+                margin-#{$end-direction}: 16px;
+                color: $color-grey-18;
+            }
+            .black-link {
+                color: $color-black;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-xl {
+    .account-form-container {
+        padding: 45px 16px;
+    }
+}
+
+@include media-breakpoint-md {
+    .account-form-container {
+        width: 100% !important;
+        padding: 24px;
+        .form-content {
+            width: 100% !important;
+            .form-title {
+                font-size: 22px;
+                margin-bottom: 12px;
+            }
+            .form-group {
+                margin-bottom: 8px;
+            }
+            .blue-link {
+                font-size: 14px;
+                margin-bottom: 14px;
+            }
+            .btn.btn-style-4 {
+                margin-bottom: 14px;
+            }
+            .btn.btn-style-5:not(:last-child) {
+                margin-bottom: 14px;
+            }
+            .btn.btn-style-5:last-child {
+                margin-bottom: 22px;
+            }
+            .other-option-text {
+                font-size: 14px;
+                span {
+                    margin-#{$end-direction}: 12px;
+                }
+            }
+        }
+    }
+}

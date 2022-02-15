@@ -1,0 +1,51 @@
+.btn.btn-style-5 {
+    height: 54px;
+    border-radius: 10px;
+    @include boxShadow(0px 0px 3px rgba($color-black, 0.084), 0px 2px 3px rgba($color-black, 0.168));
+    display: flex;
+    align-items: center;
+    svg {
+        width: 23px;
+        height: 23px;
+        margin-#{$end-direction}: 16px;
+    }
+    span {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    &:focus {
+        @include boxShadow(0px 0px 3px rgba($color-black, 0.084), 0px 2px 3px rgba($color-black, 0.168) !important);
+    }
+    &.facebook {
+        background: $color-blue;
+        span {
+            color: $color-white;
+        }
+    }
+    &.google {
+        background: $color-white;
+        span {
+            color: rgba($color-black, 54%);
+        }
+    }
+    &.apple {
+        background: $color-black;
+        span {
+            color: $color-white;
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .btn.btn-style-5 {
+        height: 45px;
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-#{$end-direction}: 12px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.btn.btn-style-4 {
+    border: 1px solid $color-grey-15;
+    border-radius: 11px;
+    background: $color-black;
+    padding: 8px 20px;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 600;
+    @include transition(all .2s ease-in-out);
+    &:hover {
+        background: $color-white;
+        color: $color-black;
+        border-color: $color-black;
+    }
+}

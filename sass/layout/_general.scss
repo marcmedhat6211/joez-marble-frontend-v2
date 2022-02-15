@@ -52,6 +52,12 @@ img {
     padding-top: 90px;
 }
 
+label.error {
+    font-size: 12px;
+    color: $color-red;
+    align-self: flex-start;
+}
+
 @include media-breakpoint-md {
     .pt-20 {
         padding-top: 0;
