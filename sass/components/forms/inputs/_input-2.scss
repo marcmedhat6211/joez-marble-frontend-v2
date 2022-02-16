@@ -1,0 +1,25 @@
+.input-style-2 {
+    input,
+    select,
+    textarea {
+        background: transparent;
+        border-radius: 0;
+        border: 1px solid $color-grey-19;
+        font-size: 15px;
+        font-weight: 500;
+        color: $color-grey-20;
+        &::placeholder {
+            font-size: 15px;
+            font-weight: 500;
+            color: $color-grey-20;
+        }
+        &:focus {
+            @include boxShadow(none);
+            background: transparent;
+            border-color: $color-grey-19;
+        }
+    }
+    input {
+        min-height: 46px;
+    }
+}

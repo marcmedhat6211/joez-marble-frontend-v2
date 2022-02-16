@@ -23,6 +23,12 @@
             }
         }
     }
+    &.border-light {
+        border-color: $color-grey-19 !important;
+        &:hover {
+            border-color: $color-grey-19 !important;
+        }
+    }
 }
 
 @include media-breakpoint-md {
