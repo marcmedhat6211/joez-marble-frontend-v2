@@ -58,3 +58,14 @@
         }
     }
 }
+
+@include media-breakpoint-md {
+    #faqs_page {
+        .questions-collection-container {
+            .collection-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

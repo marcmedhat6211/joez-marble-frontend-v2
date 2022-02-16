@@ -1,0 +1,17 @@
+.input-style-3 {
+    input {
+        height: 46px;
+        border: 1px solid $color-black;
+        font-size: 15px;
+        color: $color-black;
+        background: $color-white;
+        &::placeholder {
+            font-size: 15px;
+            color: $color-grey-20;
+        }
+        &:focus {
+            @include boxShadow(none);
+            border-color: $color-black;
+        }
+    }
+}

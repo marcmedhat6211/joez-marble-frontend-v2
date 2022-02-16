@@ -29,6 +29,9 @@
             border-color: $color-grey-19 !important;
         }
     }
+    &.thick-border {
+        border-width: 2px;
+    }
 }
 
 @include media-breakpoint-md {

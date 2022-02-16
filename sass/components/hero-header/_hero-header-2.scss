@@ -61,3 +61,21 @@
         }
     }
 }
+
+@include media-breakpoint-md {
+    .hero-header.hero-header-2 {
+        padding: 24px;
+        height: 300px;
+        .header-content {
+            width: 100%;
+            .header-title {
+                font-size: 30px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
