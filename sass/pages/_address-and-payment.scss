@@ -9,6 +9,9 @@
         border: 1px solid $color-grey-19;
         background: $color-grey-21;
         padding: 35px 60px;
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
     }
     #shipping_details_container {
         .shipping-details-title {

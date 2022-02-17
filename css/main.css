@@ -12732,6 +12732,9 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   background: #F9F9F9;
   padding: 35px 60px;
 }
+#address_and_payment_page .section-box:not(:last-child) {
+  margin-bottom: 60px;
+}
 #address_and_payment_page #shipping_details_container .shipping-details-title {
   font-size: 25px;
   font-weight: 500;
