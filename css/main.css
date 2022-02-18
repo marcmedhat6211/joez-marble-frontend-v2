@@ -12484,6 +12484,7 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 25px;
 }
 
 @media (max-width: 991.98px) {
