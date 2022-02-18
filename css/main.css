@@ -12817,5 +12817,59 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   opacity: 1;
   visibility: visible;
 }
+#address_and_payment_page #payment_details_cotainer .payment-amounts-section .payment-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+}
+#address_and_payment_page #payment_details_cotainer .payment-amounts-section .payment-amount:not(:last-child) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+#address_and_payment_page #payment_details_cotainer .payment-amounts-section .payment-amount .payment-amount-title {
+  color: #636363;
+}
+#address_and_payment_page #payment_details_cotainer .payment-amounts-section .payment-amount .payment-amount-value {
+  color: #000000;
+}
+#address_and_payment_page #payment_details_cotainer .payment-amounts-section .payment-amount.grand-total {
+  margin-top: 21px;
+  margin-bottom: 120px;
+  border: none;
+}
+#address_and_payment_page #payment_details_cotainer .payment-amounts-section .payment-amount.grand-total .payment-amount-title {
+  color: #000000;
+  font-weight: 700;
+}
+
+@media (max-width: 991.98px) {
+  #address_and_payment_page .section-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  #address_and_payment_page .section-box {
+    padding: 20px 30px;
+  }
+  #address_and_payment_page .section-box:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  #address_and_payment_page #shipping_details_container .shipping-details-title {
+    font-size: 20px;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  #address_and_payment_page #shipping_details_container .btns-container {
+    margin-top: 35px;
+  }
+  #address_and_payment_page #shipping_details_container .btns-container .btn {
+    width: fit-content !important;
+  }
+  #address_and_payment_page #payment_details_cotainer .payment-amounts-section .payment-amount.grand-total {
+    margin-bottom: 50px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
