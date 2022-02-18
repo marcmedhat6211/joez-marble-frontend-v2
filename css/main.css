@@ -12760,5 +12760,62 @@ header #desktop_header #header_part_three .header-three-items-container .header-
 #address_and_payment_page #shipping_details_container .btns-container .btn {
   width: 35% !important;
 }
+#address_and_payment_page #payment_details_cotainer .payment-details-section .payment-detail {
+  margin-bottom: 13px;
+  font-size: 12px;
+  font-weight: 400;
+}
+#address_and_payment_page #payment_details_cotainer .payment-details-section .payment-detail .detail-title {
+  color: #636363;
+}
+#address_and_payment_page #payment_details_cotainer .payment-details-section .payment-detail .detail-description {
+  color: #000000;
+}
+#address_and_payment_page #payment_details_cotainer .payment-details-section .coupon-code-section .section-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 21px;
+  color: #000000;
+}
+#address_and_payment_page #payment_details_cotainer .payment-details-section .coupon-code-section .form-group {
+  position: relative;
+}
+#address_and_payment_page #payment_details_cotainer .payment-details-section .coupon-code-section .form-group input {
+  text-align: center;
+  color: #000000;
+  padding: 0.375rem 40px;
+}
+#address_and_payment_page #payment_details_cotainer .payment-details-section .coupon-code-section .form-group .remove-coupon-btn {
+  opacity: 0;
+  visibility: hidden;
+  width: 14px;
+  height: 14px;
+  background: #000000;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  right: 20px;
+}
+#address_and_payment_page #payment_details_cotainer .payment-details-section .coupon-code-section .form-group .remove-coupon-btn svg {
+  width: 9px;
+  height: 9px;
+  color: #FFFFFF;
+}
+#address_and_payment_page #payment_details_cotainer .payment-details-section .coupon-code-section .form-group .remove-coupon-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
 
 /*# sourceMappingURL=main.css.map */

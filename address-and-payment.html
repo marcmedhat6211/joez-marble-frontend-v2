@@ -225,8 +225,8 @@
                                 <h6 class="shipping-details-title">Ship To</h6>
                                 <p class="company-name detail-info">Company Name</p>
                                 <p class="name detail-info">
-                                    <span class="first-name">Name</span>
-                                    <span class="last-name"></span>
+                                    <span class="first-name">First Name</span>
+                                    <span class="last-name">Last Name</span>
                                 </p>
                                 <p class="address-name detail-info">Address Name</p>
                                 <p class="mobile-number detail-info">Mobile Number</p>
@@ -243,9 +243,56 @@
 
 
                 <h2 class="section-title">Payment Details</h2>
-                <form class="section-box" action="#" id="payment_form">
-
-                </form>
+                <div class="section-box" id="payment_details_cotainer">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <div class="payment-details-section">
+                                <p class="payment-detail date">
+                                    <span class="detail-title">Order Date: </span>
+                                    <span class="detail-description">18/12/2021</span>
+                                </p>
+                                <p class="payment-detail payment-method">
+                                    <span class="detail-title">Payment Method: </span>
+                                    <span class="detail-description">COD</span>
+                                </p>
+                                <p class="payment-detail shipping-amount">
+                                    <span class="detail-title">Shipping Amount: </span>
+                                    <span class="detail-description">30 EGP</span>
+                                </p>
+                                <form action="#" class="coupon-code-section" id="coupon_code_form">
+                                    <p class="section-title">Coupon Code:</p>
+                                    <div class="form-group input-style-3 w-100">
+                                        <input type="text" class="form-control" name="coupon-code" id="coupon_input" placeholder="Enter Coupon Code.." autocomplete="off">
+                                        <button type="button" class="btn remove-coupon-btn" id="remove_coupon_btn">
+                                        <i class="convert-svg" data-src="images/icons/x.svg"></i>
+                                    </button>
+                                    </div>
+                                    <button type="submit" class="btn btn-style-1 hover-effect">Apply Code</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 offset-3">
+                            <div class="payment-amounts-section">
+                                <div class="payment-amount subtotal">
+                                    <span class="payment-amount-title">Subtotal:</span>
+                                    <span class="payment-amount-value">1,000 EGP</span>
+                                </div>
+                                <div class="payment-amount coupon-discount">
+                                    <span class="payment-amount-title">Coupon discount:</span>
+                                    <span class="payment-amount-value">-400 EGP</span>
+                                </div>
+                                <div class="payment-amount tax-and-shipping">
+                                    <span class="payment-amount-title">Taxes + Shipping:</span>
+                                    <span class="payment-amount-value">170 EGP</span>
+                                </div>
+                                <div class="payment-amount grand-total">
+                                    <span class="payment-amount-title">Grand Total:</span>
+                                    <span class="payment-amount-value">770 EGP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!--END BODY-->
