@@ -1,5 +1,6 @@
 #back_to_top_btn {
     position: fixed;
+    z-index: 10;
     bottom: 8px;
     #{$end-direction}: 8px;
     padding: 0;
