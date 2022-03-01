@@ -1,0 +1,36 @@
+.tab.tab-style-1 {
+  .nav-item {
+    &:not(:last-child) {
+      margin-#{$end-direction}: 50px;
+    }
+    .nav-link {
+      font-size: 30px;
+      font-weight: 400;
+      color: $color-grey-8;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 10px;
+      border-radius: 0;
+      @include transition(all 0.2s ease-in-out);
+      &.active {
+        background: transparent;
+        color: $color-purple-2;
+        border-color: $color-purple-2;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-md {
+  .tab.tab-style-1 {
+    .nav-item {
+      &:not(:last-child) {
+        margin-#{$end-direction}: 20px;
+      }
+      .nav-link {
+        font-size: 18px;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 6px;
+      }
+    }
+  }
+}
