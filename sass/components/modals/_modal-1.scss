@@ -1,3 +1,13 @@
+@mixin close_modal_btn {
+  padding: 0;
+  background: transparent;
+  svg {
+    width: 18px;
+    height: 18px;
+    color: $color-black;
+  }
+}
+
 .modal.modal-style-1 {
   .modal-dialog {
     max-width: 1000px;
@@ -16,13 +26,7 @@
             color: $color-black;
           }
           .btn.close-modal-btn {
-            padding: 0;
-            background: transparent;
-            svg {
-              width: 18px;
-              height: 18px;
-              color: $color-black;
-            }
+            @include close_modal_btn();
           }
         }
         .nav-pills {
@@ -69,10 +73,44 @@
 }
 
 @include media-breakpoint-md {
-  .modal.modal-style-3 {
+  .modal.modal-style-1 {
     .modal-dialog {
       max-width: 100%;
       .modal-content {
+        .modal-body {
+          padding: 16px;
+          .modal-header-container {
+            margin-bottom: 16px;
+            .modal-title {
+              font-size: 20px;
+            }
+          }
+          & > div:last-child {
+            flex-direction: column;
+          }
+          .nav-pills {
+            flex: 0 0 auto;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+              width: 0px;
+              background: transparent;
+              display: none;
+            }
+            .nav-item {
+              &:not(:last-child) {
+                margin-bottom: 0;
+              }
+              a.nav-link {
+                white-space: nowrap;
+              }
+            }
+          }
+          .modal-description-container {
+            max-height: 200px;
+          }
+        }
       }
     }
   }

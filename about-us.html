@@ -45,7 +45,12 @@
               >
               <a href="living.html" class="quick-access-link">Joez Living</a>
             </div>
-            <button class="btn country-btn" id="country_btn">
+            <button
+              class="btn country-btn"
+              id="country_btn"
+              data-toggle="modal"
+              data-target="#shopAndShipModal"
+            >
               <img
                 class="lazy"
                 data-src="images/placeholders/flag-1.jpg"
@@ -370,6 +375,117 @@
         data-src="images/icons/caret-double-up-bold.svg"
       ></i>
     </button>
+
+    <!-- SUBSCRIBE MODAL -->
+    <div
+      class="modal fade modal-style-2"
+      id="subscribeModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="subscribeModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <form action="#" class="modal-body" id="subscribe_form">
+            <div class="d-flex justify-content-end">
+              <button
+                type="button"
+                class="btn close-modal-btn"
+                data-dismiss="modal"
+              >
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+            </div>
+            <div class="d-flex flex-column align-items-center w-100">
+              <h6 class="form-title text-center mb-3">
+                Psst, Hey, You! <br />
+                (Yeah, You)
+              </h6>
+              <p class="form-text text-center mb-3 w-75">
+                Want in on new arrivals, sales and more? Well, you know what to
+                do.
+              </p>
+              <div class="form-group input-style-3 w-75">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="subscribe-email"
+                  placeholder="Enter your email.."
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-style-1 bg-black hover-effect w-25"
+              >
+                SUBMIT
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END SUBSCRIBE MODAL -->
+
+    <!-- SHOP AND SHIP MODAL -->
+    <div
+      class="modal fade modal-style-3"
+      id="shopAndShipModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="shopAndShipModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <form action="#" class="modal-body" id="region_and_currency_form">
+            <div class="d-flex justify-content-end">
+              <button
+                type="button"
+                class="btn close-modal-btn"
+                data-dismiss="modal"
+              >
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+            </div>
+            <h6 class="form-title mb-3">Shop & Ship</h6>
+            <div class="form-group input-style-3 w-75 has-icon">
+              <select class="form-control" name="region">
+                <option>Choose your region</option>
+                <option value="egypt">Egypt</option>
+                <option value="usa">USA</option>
+              </select>
+              <i class="convert-svg" data-src="images/icons/caret-down.svg"></i>
+            </div>
+            <div class="form-group input-style-3 w-50 has-icon">
+              <select class="form-control" name="currency">
+                <option>Currency</option>
+                <option value="egp">EGP</option>
+                <option value="usd">USD</option>
+              </select>
+              <i class="convert-svg" data-src="images/icons/caret-down.svg"></i>
+            </div>
+            <div class="modal-notes-container">
+              <p class="notes-title">A Few things to note:</p>
+              <ul class="modal-notes">
+                <li class="note">Lorem ipsum lorem ipsum lorem lorem.</li>
+                <li class="note">Lorem ipsum lorem ipsum lorem lorem.</li>
+                <li class="note">Lorem ipsum lorem ipsum lorem lorem.</li>
+                <li class="note">Lorem ipsum lorem ipsum lorem lorem.</li>
+              </ul>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-style-1 bg-black hover-effect w-100"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END SHOP AND SHIP MODAL -->
 
     <!-- PRIVACY POLICY MODAL -->
     <div

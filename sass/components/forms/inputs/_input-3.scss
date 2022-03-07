@@ -1,17 +1,34 @@
 .input-style-3 {
-    input {
-        height: 46px;
-        border: 1px solid $color-black;
-        font-size: 15px;
-        color: $color-black;
-        background: $color-white;
-        &::placeholder {
-            font-size: 15px;
-            color: $color-grey-20;
-        }
-        &:focus {
-            @include boxShadow(none);
-            border-color: $color-black;
-        }
+  input,
+  select {
+    height: 46px;
+    border: 1px solid $color-black;
+    border-radius: 0;
+    font-size: 15px;
+    color: $color-black;
+    background: $color-white;
+    &::placeholder {
+      font-size: 15px;
+      color: $color-grey-20;
     }
+    &:focus {
+      @include boxShadow(none);
+      border-color: $color-black;
+    }
+  }
+  &.has-icon {
+    position: relative;
+    select {
+      appearance: none;
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50% * $transform-direction));
+      #{$end-direction}: 14px;
+      color: $color-black;
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
