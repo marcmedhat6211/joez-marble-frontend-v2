@@ -13564,7 +13564,7 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   transition: all 0.2s ease-in-out;
 }
 #product_details_page .product-images-section .swiper-container.thumbs-swiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
-  border-color: #665D90;
+  border-color: #000000;
 }
 #product_details_page .product-images-section .swiper-container.thumbs-swiper .swiper-wrapper .swiper-slide .thumb-img-container {
   width: 100%;
@@ -13631,7 +13631,7 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   justify-content: center;
 }
 #product_details_page .product-details-section .tab-content .tab-pane .product-description-container .product-description {
-  text-align: center;
+  text-align: left;
   font-size: 14px;
   font-weight: 400;
   color: #000000;
