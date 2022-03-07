@@ -1,0 +1,29 @@
+.modal.modal-style-4 {
+  .modal-dialog {
+    max-width: 700px;
+    .modal-content {
+      border-radius: 0;
+      form.modal-body {
+        .btn.close-modal-btn {
+          @include close_modal_btn();
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-md {
+  .modal.modal-style-4 {
+    .modal-dialog {
+      max-width: 100%;
+      .modal-content {
+        form.modal-body {
+          .btn.close-modal-btn {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+}
