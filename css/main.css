@@ -11673,6 +11673,77 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   border-color: #000000;
 }
 
+.modal.modal-style-1 .modal-dialog {
+  max-width: 1000px;
+}
+.modal.modal-style-1 .modal-dialog .modal-content {
+  border-radius: 0;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body {
+  padding: 32px;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .modal-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .modal-header-container .modal-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .modal-header-container .btn.close-modal-btn {
+  padding: 0;
+  background: transparent;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .modal-header-container .btn.close-modal-btn svg {
+  width: 18px;
+  height: 18px;
+  color: #000000;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .nav-pills {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .nav-pills .nav-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .nav-pills .nav-item a.nav-link {
+  background: transparent;
+  color: #000000;
+  font-weight: 700;
+  font-size: 12px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .nav-pills .nav-item a.nav-link.active {
+  color: #665D90;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .modal-description-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .modal-description-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  display: none;
+}
+.modal.modal-style-1 .modal-dialog .modal-content .modal-body .modal-description-container .tab-content .tab-pane .tab-description {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+}
+
+@media (max-width: 991.98px) {
+  .modal.modal-style-3 .modal-dialog {
+    max-width: 100%;
+  }
+}
 .badge.badge-style-1 {
   height: 37px;
   border-radius: 0;
