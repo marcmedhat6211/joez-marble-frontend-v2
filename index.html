@@ -481,7 +481,9 @@
         <!-- BANNER SECTION -->
         <section class="banner-section">
           <div class="swiper-container banner-swiper">
-            <div class="swiper-scrollbar"></div>
+            <div class="banner-slider-scrollbar">
+              <div class="scrollbar"></div>
+            </div>
             <div class="swiper-wrapper">
               <!-- slide -->
               <div class="swiper-slide">
@@ -1418,6 +1420,129 @@
       </div>
     </div>
     <!-- END SUBSCRIPTION MODAL -->
+
+    <!-- USER FEEDBACK MODAL -->
+    <div
+      class="modal fade modal-style-5"
+      id="userFeedbackModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="userFeedbackModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="btn close-modal-btn"
+              data-dismiss="modal"
+            >
+              <i class="convert-svg" data-src="images/icons/x.svg"></i>
+            </button>
+            <div class="logo-img-container">
+              <img
+                class="lazy"
+                data-src="https://via.placeholder.com/155x50"
+                alt=""
+              />
+            </div>
+            <form action="#" id="user_feedback_form">
+              <p class="form-text-info">
+                How likely are you to recommend Joez Designs to a friend or
+                colleague?
+              </p>
+              <div class="radios-container">
+                <div class="radios">
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="1"
+                    required
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="2"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="3"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="4"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="5"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="6"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="7"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="8"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="9"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="10"
+                  />
+                </div>
+                <div class="info-text">
+                  <p class="info mb-0">Not at all</p>
+                  <p class="info mb-0">Extremely likely</p>
+                </div>
+              </div>
+              <p class="form-text-info">
+                Please choose a category you would like to leave a feedback
+                about
+              </p>
+              <div class="form-group">
+                <select class="custom-select" required>
+                  <option value="" selected>Choose..</option>
+                  <option value="1">Service</option>
+                  <option value="2">Shipping</option>
+                </select>
+              </div>
+              <div
+                class="submit-btn-container d-flex justify-content-center align-items-center"
+              >
+                <button type="submit" class="btn btn-style-1">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END USER FEEDBACK MODAL -->
 
     <!-- BASE JS-->
     <script src="js/jquery-3.4.1.min.js"></script>

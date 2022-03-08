@@ -47,17 +47,17 @@
     .banner-swiper {
       height: 100%;
       position: relative;
-      .swiper-scrollbar {
-        #{$start-direction}: 0;
-        bottom: auto;
-        top: 0;
-        width: 100%;
+      .banner-slider-scrollbar {
+        position: absolute;
         height: 6px;
+        width: 100%;
+        top: 0;
         background: $color-grey-8;
-        .swiper-scrollbar-drag {
+        z-index: 5;
+        .scrollbar {
+          height: 100%;
           background: $color-orange;
-          // @include transform(none !important);
-          @include transition(all 0.2s ease-in-out);
+          @include transition(all 0.4s ease-in-out);
         }
       }
       .swiper-wrapper {

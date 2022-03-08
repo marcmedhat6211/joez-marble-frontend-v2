@@ -1,0 +1,105 @@
+.modal.modal-style-5 {
+  .modal-dialog {
+    .modal-content {
+      border-radius: 25px;
+      .modal-body {
+        padding: 24px 16px;
+        .error {
+          color: red;
+          font-size: 14px;
+          margin-top: 6px;
+        }
+        .close-modal-btn {
+          padding: 0;
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          top: 24px;
+          #{$end-direction}: 24px;
+          svg {
+            color: $color-purple;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .logo-img-container {
+          width: 155px;
+          height: 50px;
+          margin-bottom: 40px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        form#user_feedback_form {
+          .form-text-info {
+            font-size: 16px;
+            color: $color-black;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-align: center;
+          }
+          .radios-container {
+            border: 1px solid $color-grey-15;
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 18px;
+            .radios {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 16px;
+            }
+            .info-text {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .info {
+                font-size: 14px;
+                color: rgba($color-purple, 0.67);
+                font-weight: 500;
+              }
+            }
+          }
+          .form-group {
+            .custom-select {
+              border: 1px solid $color-grey-25;
+              &:focus {
+                box-shadow: none;
+                border-color: $color-grey-25;
+              }
+              color: rgba($color-purple, 0.67);
+              border-radius: 8px;
+              option {
+                color: $color-purple;
+              }
+              &::placeholder {
+                color: rgba($color-purple, 0.67);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-md {
+  .modal.modal-style-5 {
+    .modal-dialog {
+      max-width: 100%;
+      .modal-content {
+        border-radius: 20px;
+        .modal-body {
+          form#user_feedback_form {
+            .form-text-info {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
