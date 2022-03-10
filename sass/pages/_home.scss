@@ -132,6 +132,8 @@
     .img-collection-link {
       height: 280px;
       img {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }
@@ -217,6 +219,37 @@
       font-weight: 300;
     }
   }
+  .why-us-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 75px;
+    .section-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 3px solid $color-purple;
+      padding-top: 18px;
+      &:not(:last-child) {
+        margin-#{$end-direction}: 25px;
+      }
+      .column-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: $color-black;
+        margin-bottom: 20px;
+      }
+      .column-icon {
+        color: $color-black;
+        margin-bottom: 20px;
+      }
+      .column-description {
+        font-size: 12px;
+        font-weight: 400;
+        color: $color-black;
+      }
+    }
+  }
   .reviews-section {
     margin-bottom: 50px;
     .page-title {
@@ -254,6 +287,134 @@
           font-weight: 500;
           color: $color-grey-23;
           margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-md {
+  #home_page_container {
+    .banner-section {
+      height: 250px;
+      margin-bottom: 30px;
+      .banner-swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            .banner-container {
+              .banner-text-container {
+                width: 60%;
+                .banner-title {
+                  margin-bottom: 12px;
+                }
+                .banner-description {
+                  font-size: 13px;
+                  margin-bottom: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .images-collections-section {
+      margin-bottom: 30px;
+      .img-collection-link {
+        height: 200px;
+      }
+    }
+    .quick-access-links-images-section {
+      margin-bottom: 30px;
+      .img-link.main-img {
+        height: 200px;
+      }
+      .img-link.thumb-img {
+        height: 150px;
+      }
+      .img-link.thumb-thumb-img {
+        height: 85px;
+        &:first-child {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .line {
+      margin-bottom: 30px;
+    }
+    .living-section {
+      flex-direction: column;
+      margin-bottom: 30px;
+      .logo-container {
+        flex: 0 0 100%;
+        height: 300px;
+        border: none;
+        padding-#{$end-direction}: 0;
+        margin-#{$end-direction}: 0;
+        margin-bottom: 25px;
+      }
+      .section-text-container {
+        .section-title {
+          font-size: 20px;
+          margin-bottom: 16px;
+        }
+        .section-description {
+          font-size: 16px;
+          margin-bottom: 16px;
+        }
+        .btn {
+          width: 100% !important;
+        }
+      }
+    }
+    .featured-products-section {
+      .section-img {
+        height: 200px;
+      }
+      .section-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      .section-description {
+        font-size: 16px;
+      }
+    }
+    .why-us-section {
+      flex-wrap: nowrap;
+      margin-bottom: 30px;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+        display: none;
+      }
+      .section-column {
+        &:not(:last-child) {
+          margin-#{$end-direction}: 16px;
+        }
+        .column-title {
+          white-space: nowrap;
+          font-size: 16px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+    .reviews-section {
+      margin-bottom: 30;
+      .page-title {
+        margin-bottom: 40px;
+        font-size: 22px;
+      }
+      .share-feeback-section {
+        .share-feedback-container {
+          max-width: 80%;
+          .title {
+            font-size: 22px;
+            margin-bottom: 16px;
+          }
+          .text {
+            font-size: 18px;
+            margin-bottom: 16px;
+          }
         }
       }
     }
