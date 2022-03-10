@@ -1,0 +1,32 @@
+#cutomizable_gifts_page {
+  .block-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: $color-black;
+    margin-bottom: 18px;
+  }
+  .shapes-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 14px;
+    .shape {
+      padding: 0;
+      label {
+        border: 2px solid $color-grey-8;
+        padding: 4px 12px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include transition(all 0.2s ease-in-out);
+      }
+      &:hover,
+      &.checked {
+        label {
+          background: rgba($color-grey-8, 40%);
+          border-color: $color-black;
+        }
+      }
+    }
+  }
+}

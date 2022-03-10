@@ -14125,5 +14125,36 @@ header #desktop_header #header_part_three .header-three-items-container .header-
     right: 0;
   }
 }
+#cutomizable_gifts_page .block-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 18px;
+}
+#cutomizable_gifts_page .shapes-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 14px;
+}
+#cutomizable_gifts_page .shapes-container .shape {
+  padding: 0;
+}
+#cutomizable_gifts_page .shapes-container .shape label {
+  border: 2px solid #c4c4c4;
+  padding: 4px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#cutomizable_gifts_page .shapes-container .shape:hover label, #cutomizable_gifts_page .shapes-container .shape.checked label {
+  background: rgba(196, 196, 196, 0.4);
+  border-color: #000000;
+}
 
 /*# sourceMappingURL=main.css.map */
