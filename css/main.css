@@ -14125,21 +14125,34 @@ header #desktop_header #header_part_three .header-three-items-container .header-
     right: 0;
   }
 }
+#cutomizable_gifts_page .page-block:not(:last-child) {
+  margin-bottom: 30px;
+}
+#cutomizable_gifts_page .page-block.icons-container .block-header {
+  display: flex;
+  align-items: center;
+}
+#cutomizable_gifts_page .page-block.icons-container .block-header .block-title {
+  margin-right: 16px;
+}
+#cutomizable_gifts_page .page-block.icons-container .block-header .form-check {
+  padding-bottom: 14px;
+}
 #cutomizable_gifts_page .block-title {
   font-size: 25px;
   font-weight: 600;
   color: #000000;
   margin-bottom: 18px;
 }
-#cutomizable_gifts_page .shapes-container {
+#cutomizable_gifts_page .shapes-block {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 14px;
 }
-#cutomizable_gifts_page .shapes-container .shape {
+#cutomizable_gifts_page .shapes-block .shape {
   padding: 0;
 }
-#cutomizable_gifts_page .shapes-container .shape label {
+#cutomizable_gifts_page .shapes-block .shape label {
   border: 2px solid #c4c4c4;
   padding: 4px 12px;
   cursor: pointer;
@@ -14152,9 +14165,37 @@ header #desktop_header #header_part_three .header-three-items-container .header-
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-#cutomizable_gifts_page .shapes-container .shape:hover label, #cutomizable_gifts_page .shapes-container .shape.checked label {
+#cutomizable_gifts_page .shapes-block .shape:hover label, #cutomizable_gifts_page .shapes-block .shape.checked label {
   background: rgba(196, 196, 196, 0.4);
   border-color: #000000;
+}
+#cutomizable_gifts_page .text-block .text-block-input-container {
+  position: relative;
+  margin: 0;
+}
+#cutomizable_gifts_page .text-block .text-block-input-container input {
+  border: 2px solid #c4c4c4;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: 12px;
+}
+#cutomizable_gifts_page .text-block .text-block-input-container input::placeholder {
+  color: #848484;
+}
+#cutomizable_gifts_page .text-block .text-block-input-container input:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #000000;
+}
+#cutomizable_gifts_page .text-block .text-block-input-container small.form-text {
+  font-size: 13px;
+  position: absolute;
+  top: -25px;
+  right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

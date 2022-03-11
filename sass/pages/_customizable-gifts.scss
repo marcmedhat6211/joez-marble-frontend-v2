@@ -1,11 +1,26 @@
 #cutomizable_gifts_page {
+  .page-block:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .page-block.icons-container {
+    .block-header {
+      display: flex;
+      align-items: center;
+      .block-title {
+        margin-#{$end-direction}: 16px;
+      }
+      .form-check {
+        padding-bottom: 14px;
+      }
+    }
+  }
   .block-title {
     font-size: 25px;
     font-weight: 600;
     color: $color-black;
     margin-bottom: 18px;
   }
-  .shapes-container {
+  .shapes-block {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 14px;
@@ -26,6 +41,30 @@
           background: rgba($color-grey-8, 40%);
           border-color: $color-black;
         }
+      }
+    }
+  }
+  .text-block {
+    .text-block-input-container {
+      position: relative;
+      margin: 0;
+      input {
+        border: 2px solid $color-grey-8;
+        @include transition(all 0.2s ease-in-out);
+        font-size: 12px;
+        &::placeholder {
+          color: $color-grey-26;
+        }
+        &:focus {
+          @include boxShadow(none);
+          border-color: $color-black;
+        }
+      }
+      small.form-text {
+        font-size: 13px;
+        position: absolute;
+        top: -25px;
+        #{$end-direction}: 0;
       }
     }
   }

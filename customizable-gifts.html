@@ -281,13 +281,18 @@
       <div id="cutomizable_gifts_page" class="py-5">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-7">
+            <div class="col-6">
               <!-- SHAPES -->
               <div class="page-block">
                 <h6 class="block-title">Choose Shape</h6>
-                <div class="shapes-container" id="shapes_container">
+                <div class="shapes-block" id="shapes_block">
                   <!-- shape -->
-                  <div class="form-check shape">
+                  <div
+                    class="form-check shape"
+                    data-link=""
+                    data-width=""
+                    data-height=""
+                  >
                     <input
                       class="form-check-input d-none"
                       type="radio"
@@ -301,7 +306,12 @@
                   </div>
                   <!-- end shape -->
                   <!-- shape -->
-                  <div class="form-check shape">
+                  <div
+                    class="form-check shape"
+                    data-link=""
+                    data-width=""
+                    data-height=""
+                  >
                     <input
                       class="form-check-input d-none"
                       type="radio"
@@ -315,7 +325,12 @@
                   </div>
                   <!-- end shape -->
                   <!-- shape -->
-                  <div class="form-check shape">
+                  <div
+                    class="form-check shape"
+                    data-link=""
+                    data-width=""
+                    data-height=""
+                  >
                     <input
                       class="form-check-input d-none"
                       type="radio"
@@ -329,7 +344,12 @@
                   </div>
                   <!-- end shape -->
                   <!-- shape -->
-                  <div class="form-check shape">
+                  <div
+                    class="form-check shape"
+                    data-link=""
+                    data-width=""
+                    data-height=""
+                  >
                     <input
                       class="form-check-input d-none"
                       type="radio"
@@ -343,7 +363,12 @@
                   </div>
                   <!-- end shape -->
                   <!-- shape -->
-                  <div class="form-check shape">
+                  <div
+                    class="form-check shape"
+                    data-link=""
+                    data-width=""
+                    data-height=""
+                  >
                     <input
                       class="form-check-input d-none"
                       type="radio"
@@ -357,7 +382,12 @@
                   </div>
                   <!-- end shape -->
                   <!-- shape -->
-                  <div class="form-check shape">
+                  <div
+                    class="form-check shape"
+                    data-link=""
+                    data-width=""
+                    data-height=""
+                  >
                     <input
                       class="form-check-input d-none"
                       type="radio"
@@ -371,7 +401,12 @@
                   </div>
                   <!-- end shape -->
                   <!-- shape -->
-                  <div class="form-check shape">
+                  <div
+                    class="form-check shape"
+                    data-link=""
+                    data-width=""
+                    data-height=""
+                  >
                     <input
                       class="form-check-input d-none"
                       type="radio"
@@ -389,12 +424,59 @@
               <!-- END SHAPES -->
 
               <!-- ICONS -->
-              <div class="page-block">
-                <h6 class="block-title">Choose Shape</h6>
+              <div class="page-block icons-container">
+                <div class="block-header">
+                  <h6 class="block-title">Add Icon</h6>
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="fill_shape"
+                      name="fill-shape"
+                    />
+                    <label class="form-check-label" for="fill_shape"
+                      >Fill shape</label
+                    >
+                  </div>
+                </div>
+                <div class="icons-block" id="icons_block"></div>
               </div>
               <!-- END ICONS -->
+
+              <!-- ZODIAC SIGNS -->
+              <div class="page-block">
+                <h6 class="block-title">Zodiac Signs</h6>
+                <div class="zodiac-block" id="zodiac_block"></div>
+              </div>
+              <!-- END ZODIAC SIGNS -->
+
+              <!-- TEXT BLOCK -->
+              <div class="page-block">
+                <h6 class="block-title">Text</h6>
+                <div class="text-block" id="text_block">
+                  <div class="form-group w-100 text-block-input-container">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="shape-text"
+                      id="shape_text"
+                      placeholder="Enter text here.."
+                      maxlength=""
+                    />
+                    <small id="shapeTextHelp" class="form-text text-muted"
+                      ><span id="shape_chars_limit"></span> Character
+                      limit</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- END TEXT BLOCK -->
             </div>
-            <div class="col-5"></div>
+            <div class="col-6">
+              <div id="shape">
+                <img src="" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -563,6 +645,7 @@
     <!-- END BASE JS-->
 
     <!-- PAGE JS-->
+    <script src="js/pages/customizable-gifts.js"></script>
     <!-- END PAGE JS-->
   </body>
 </html>
