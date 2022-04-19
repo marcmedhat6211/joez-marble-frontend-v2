@@ -9,7 +9,7 @@
     />
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
 
-    <title>Cutomizable Gifts Page</title>
+    <title>Customizable Gifts Page</title>
     <!-- BASE CSS-->
     <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -25,7 +25,7 @@
     </div>
     <!-- HEADER-->
     <header>
-      <div id="desktop_header">
+      <div id="desktop_header" class="d-none d-md-block">
         <!-- HEADER PART ONE -->
         <div id="header_part_one">
           <div class="header-one-content">
@@ -156,7 +156,9 @@
                       </div>
                       <div class="item-details-container">
                         <div class="item-text-container">
-                          <p class="item-title">Lorem ipsum</p>
+                          <a href="product-details.html" class="item-title"
+                            >Lorem ipsum</a
+                          >
                           <p class="item-quantity mb-0">
                             Quantity: <span>1</span>
                           </p>
@@ -184,7 +186,9 @@
                       </div>
                       <div class="item-details-container">
                         <div class="item-text-container">
-                          <p class="item-title">Lorem ipsum</p>
+                          <a href="product-details.html" class="item-title"
+                            >Lorem ipsum</a
+                          >
                           <p class="item-quantity mb-0">
                             Quantity: <span>1</span>
                           </p>
@@ -212,7 +216,9 @@
                       </div>
                       <div class="item-details-container">
                         <div class="item-text-container">
-                          <p class="item-title">Lorem ipsum</p>
+                          <a href="product-details.html" class="item-title"
+                            >Lorem ipsum</a
+                          >
                           <p class="item-quantity mb-0">
                             Quantity: <span>1</span>
                           </p>
@@ -240,7 +246,9 @@
                       </div>
                       <div class="item-details-container">
                         <div class="item-text-container">
-                          <p class="item-title">Lorem ipsum</p>
+                          <a href="product-details.html" class="item-title"
+                            >Lorem ipsum</a
+                          >
                           <p class="item-quantity mb-0">
                             Quantity: <span>1</span>
                           </p>
@@ -273,6 +281,200 @@
         </div>
         <!-- END HEADER PART TWO -->
       </div>
+      <!-- mobile header -->
+      <div id="mobile_header" class="d-flex d-md-none">
+        <button type="button" id="mobile_menu_btn" class="btn">
+          <i class="convert-svg" data-src="images/icons/mobile-menu.svg"></i>
+        </button>
+        <a href="index.html" class="mobile-logo">
+          <img
+            class="lazy"
+            data-src="https://via.placeholder.com/155x50"
+            alt=""
+          />
+        </a>
+        <div class="mobile-icons-container">
+          <button
+            type="button"
+            class="btn mobile-icon-btn search-icon"
+            id="mobile_search_btn"
+          >
+            <i
+              class="convert-svg"
+              data-src="images/icons/magnifying-glass.svg"
+            ></i>
+          </button>
+          <button
+            type="button"
+            class="btn mobile-icon-btn"
+            id="mobile_cart_btn"
+          >
+            <i class="convert-svg" data-src="images/icons/cart.svg"></i>
+          </button>
+        </div>
+        <form action="#" id="mobile_cart" class="mobile-cart">
+          <div class="title-container">
+            <h3 class="cart-title">Your Cart</h3>
+          </div>
+          <!-- cart items -->
+          <div class="items-container">
+            <!-- cart item -->
+            <div class="cart-item-container">
+              <button type="button" class="btn remove-item-btn">
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+              <div class="item-img-container">
+                <img
+                  class="lazy"
+                  data-src="https://via.placeholder.com/100x100"
+                  alt=""
+                />
+              </div>
+              <div class="item-details">
+                <h2 class="item-title">Coaster</h2>
+                <p class="item-description">Lorem Ipsum</p>
+                <div class="pricing-container">
+                  <div class="input-group incrementor incrementor-style-2">
+                    <button type="button" class="btn minus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/minus.svg"
+                      ></i>
+                    </button>
+                    <input type="number" value="1" name="qty" />
+                    <button type="button" class="btn plus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/plus.svg"
+                      ></i>
+                    </button>
+                  </div>
+                  <p class="item-price">250.00 EGP</p>
+                </div>
+              </div>
+            </div>
+            <!-- end cart item -->
+            <!-- cart item -->
+            <div class="cart-item-container">
+              <button type="button" class="btn remove-item-btn">
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+              <div class="item-img-container">
+                <img
+                  class="lazy"
+                  data-src="https://via.placeholder.com/100x100"
+                  alt=""
+                />
+              </div>
+              <div class="item-details">
+                <h2 class="item-title">Coaster</h2>
+                <p class="item-description">Lorem Ipsum</p>
+                <div class="pricing-container">
+                  <div class="input-group incrementor incrementor-style-2">
+                    <button type="button" class="btn minus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/minus.svg"
+                      ></i>
+                    </button>
+                    <input type="number" value="1" name="qty" />
+                    <button type="button" class="btn plus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/plus.svg"
+                      ></i>
+                    </button>
+                  </div>
+                  <p class="item-price">250.00 EGP</p>
+                </div>
+              </div>
+            </div>
+            <!-- end cart item -->
+            <!-- cart item -->
+            <div class="cart-item-container">
+              <button type="button" class="btn remove-item-btn">
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+              <div class="item-img-container">
+                <img
+                  class="lazy"
+                  data-src="https://via.placeholder.com/100x100"
+                  alt=""
+                />
+              </div>
+              <div class="item-details">
+                <h2 class="item-title">Coaster</h2>
+                <p class="item-description">Lorem Ipsum</p>
+                <div class="pricing-container">
+                  <div class="input-group incrementor incrementor-style-2">
+                    <button type="button" class="btn minus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/minus.svg"
+                      ></i>
+                    </button>
+                    <input type="number" value="1" name="qty" />
+                    <button type="button" class="btn plus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/plus.svg"
+                      ></i>
+                    </button>
+                  </div>
+                  <p class="item-price">250.00 EGP</p>
+                </div>
+              </div>
+            </div>
+            <!-- end cart item -->
+            <!-- cart item -->
+            <div class="cart-item-container">
+              <button type="button" class="btn remove-item-btn">
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+              <div class="item-img-container">
+                <img
+                  class="lazy"
+                  data-src="https://via.placeholder.com/100x100"
+                  alt=""
+                />
+              </div>
+              <div class="item-details">
+                <h2 class="item-title">Coaster</h2>
+                <p class="item-description">Lorem Ipsum</p>
+                <div class="pricing-container">
+                  <div class="input-group incrementor incrementor-style-2">
+                    <button type="button" class="btn minus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/minus.svg"
+                      ></i>
+                    </button>
+                    <input type="number" value="1" name="qty" />
+                    <button type="button" class="btn plus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/plus.svg"
+                      ></i>
+                    </button>
+                  </div>
+                  <p class="item-price">250.00 EGP</p>
+                </div>
+              </div>
+            </div>
+            <!-- end cart item -->
+          </div>
+          <!-- end cart items -->
+          <div class="cart-total-container">
+            <p class="text mb-0">TOTAL</p>
+            <p class="amount mb-0">750.00 EGP</p>
+          </div>
+          <button type="button" id="close_cart_btn" class="btn close-cart-btn">
+            <i class="convert-svg" data-src="images/icons/x.svg"></i>
+          </button>
+          <button type="submit" class="btn btn-style-1 w-100">CHECK OUT</button>
+        </form>
+      </div>
+      <!-- end mobile header -->
     </header>
     <!--END HEADER -->
 

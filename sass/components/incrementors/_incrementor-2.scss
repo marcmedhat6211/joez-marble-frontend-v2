@@ -1,0 +1,74 @@
+.incrementor.incrementor-style-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  border: 2px solid $color-purple;
+  border-radius: 6px;
+  width: fit-content;
+  width: 140px;
+  height: 30px;
+  padding-#{$end-direction}: 12px;
+  padding-#{$start-direction}: 12px;
+  button {
+      padding: 0;
+      &:not(:last-child) {
+          margin-right: 50px;
+      }
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      &:focus,
+      &:active {
+          box-shadow: none !important;
+          outline: none !important;
+      }
+      svg {
+          width: 100%;
+          height: 100%;
+          color: $color-purple !important;
+      }
+  }
+  input[name=qty] {
+      position: relative;
+      right: 10%;
+      transform: translateX(-50%);
+      width: 40%;
+      color: $color-purple !important;
+      font-size: 20px;
+      background: transparent;
+      border: none;
+      text-align: center;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+      -moz-appearance: textfield;
+      &:focus-visible {
+          outline: none;
+      }
+  }
+}
+
+@include media-breakpoint-md {
+  .incrementor-style-2 {
+      width: 100px;
+      padding-#{$end-direction}: 6px;
+      padding-#{$start-direction}: 6px;
+      button {
+          padding: 0;
+          &:not(:last-child) {
+              margin-right: 20px;
+          }
+          width: 14px;
+          height: 14px;
+      }
+      input[name=qty] {
+          transform: translateX(-10%);
+      }
+  }
+}

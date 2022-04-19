@@ -37,7 +37,6 @@ $(document).ready(function () {
   const totalSlidesNumber = bannerSlider.find(".swiper-slide").length;
   swiperScrollBarHandler(scrollBar, 1, totalSlidesNumber);
 
-  console.log((1 / 3) * 100);
   bannerSwiper.on("slideChange", function () {
     const currentSlideNumber = bannerSwiper.activeIndex + 1;
     swiperScrollBarHandler(scrollBar, currentSlideNumber, totalSlidesNumber);

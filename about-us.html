@@ -25,7 +25,7 @@
     </div>
     <!-- HEADER-->
     <header>
-      <div id="desktop_header">
+      <div id="desktop_header" class="d-none d-md-block">
         <!-- HEADER PART ONE -->
         <div id="header_part_one">
           <div class="header-one-content">
@@ -156,7 +156,9 @@
                       </div>
                       <div class="item-details-container">
                         <div class="item-text-container">
-                          <p class="item-title">Lorem ipsum</p>
+                          <a href="product-details.html" class="item-title"
+                            >Lorem ipsum</a
+                          >
                           <p class="item-quantity mb-0">
                             Quantity: <span>1</span>
                           </p>
@@ -184,7 +186,9 @@
                       </div>
                       <div class="item-details-container">
                         <div class="item-text-container">
-                          <p class="item-title">Lorem ipsum</p>
+                          <a href="product-details.html" class="item-title"
+                            >Lorem ipsum</a
+                          >
                           <p class="item-quantity mb-0">
                             Quantity: <span>1</span>
                           </p>
@@ -212,7 +216,9 @@
                       </div>
                       <div class="item-details-container">
                         <div class="item-text-container">
-                          <p class="item-title">Lorem ipsum</p>
+                          <a href="product-details.html" class="item-title"
+                            >Lorem ipsum</a
+                          >
                           <p class="item-quantity mb-0">
                             Quantity: <span>1</span>
                           </p>
@@ -240,7 +246,9 @@
                       </div>
                       <div class="item-details-container">
                         <div class="item-text-container">
-                          <p class="item-title">Lorem ipsum</p>
+                          <a href="product-details.html" class="item-title"
+                            >Lorem ipsum</a
+                          >
                           <p class="item-quantity mb-0">
                             Quantity: <span>1</span>
                           </p>
@@ -273,6 +281,200 @@
         </div>
         <!-- END HEADER PART TWO -->
       </div>
+      <!-- mobile header -->
+      <div id="mobile_header" class="d-flex d-md-none">
+        <button type="button" id="mobile_menu_btn" class="btn">
+          <i class="convert-svg" data-src="images/icons/mobile-menu.svg"></i>
+        </button>
+        <a href="index.html" class="mobile-logo">
+          <img
+            class="lazy"
+            data-src="https://via.placeholder.com/155x50"
+            alt=""
+          />
+        </a>
+        <div class="mobile-icons-container">
+          <button
+            type="button"
+            class="btn mobile-icon-btn search-icon"
+            id="mobile_search_btn"
+          >
+            <i
+              class="convert-svg"
+              data-src="images/icons/magnifying-glass.svg"
+            ></i>
+          </button>
+          <button
+            type="button"
+            class="btn mobile-icon-btn"
+            id="mobile_cart_btn"
+          >
+            <i class="convert-svg" data-src="images/icons/cart.svg"></i>
+          </button>
+        </div>
+        <form action="#" id="mobile_cart" class="mobile-cart">
+          <div class="title-container">
+            <h3 class="cart-title">Your Cart</h3>
+          </div>
+          <!-- cart items -->
+          <div class="items-container">
+            <!-- cart item -->
+            <div class="cart-item-container">
+              <button type="button" class="btn remove-item-btn">
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+              <div class="item-img-container">
+                <img
+                  class="lazy"
+                  data-src="https://via.placeholder.com/100x100"
+                  alt=""
+                />
+              </div>
+              <div class="item-details">
+                <h2 class="item-title">Coaster</h2>
+                <p class="item-description">Lorem Ipsum</p>
+                <div class="pricing-container">
+                  <div class="input-group incrementor incrementor-style-2">
+                    <button type="button" class="btn minus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/minus.svg"
+                      ></i>
+                    </button>
+                    <input type="number" value="1" name="qty" />
+                    <button type="button" class="btn plus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/plus.svg"
+                      ></i>
+                    </button>
+                  </div>
+                  <p class="item-price">250.00 EGP</p>
+                </div>
+              </div>
+            </div>
+            <!-- end cart item -->
+            <!-- cart item -->
+            <div class="cart-item-container">
+              <button type="button" class="btn remove-item-btn">
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+              <div class="item-img-container">
+                <img
+                  class="lazy"
+                  data-src="https://via.placeholder.com/100x100"
+                  alt=""
+                />
+              </div>
+              <div class="item-details">
+                <h2 class="item-title">Coaster</h2>
+                <p class="item-description">Lorem Ipsum</p>
+                <div class="pricing-container">
+                  <div class="input-group incrementor incrementor-style-2">
+                    <button type="button" class="btn minus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/minus.svg"
+                      ></i>
+                    </button>
+                    <input type="number" value="1" name="qty" />
+                    <button type="button" class="btn plus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/plus.svg"
+                      ></i>
+                    </button>
+                  </div>
+                  <p class="item-price">250.00 EGP</p>
+                </div>
+              </div>
+            </div>
+            <!-- end cart item -->
+            <!-- cart item -->
+            <div class="cart-item-container">
+              <button type="button" class="btn remove-item-btn">
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+              <div class="item-img-container">
+                <img
+                  class="lazy"
+                  data-src="https://via.placeholder.com/100x100"
+                  alt=""
+                />
+              </div>
+              <div class="item-details">
+                <h2 class="item-title">Coaster</h2>
+                <p class="item-description">Lorem Ipsum</p>
+                <div class="pricing-container">
+                  <div class="input-group incrementor incrementor-style-2">
+                    <button type="button" class="btn minus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/minus.svg"
+                      ></i>
+                    </button>
+                    <input type="number" value="1" name="qty" />
+                    <button type="button" class="btn plus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/plus.svg"
+                      ></i>
+                    </button>
+                  </div>
+                  <p class="item-price">250.00 EGP</p>
+                </div>
+              </div>
+            </div>
+            <!-- end cart item -->
+            <!-- cart item -->
+            <div class="cart-item-container">
+              <button type="button" class="btn remove-item-btn">
+                <i class="convert-svg" data-src="images/icons/x.svg"></i>
+              </button>
+              <div class="item-img-container">
+                <img
+                  class="lazy"
+                  data-src="https://via.placeholder.com/100x100"
+                  alt=""
+                />
+              </div>
+              <div class="item-details">
+                <h2 class="item-title">Coaster</h2>
+                <p class="item-description">Lorem Ipsum</p>
+                <div class="pricing-container">
+                  <div class="input-group incrementor incrementor-style-2">
+                    <button type="button" class="btn minus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/minus.svg"
+                      ></i>
+                    </button>
+                    <input type="number" value="1" name="qty" />
+                    <button type="button" class="btn plus">
+                      <i
+                        class="convert-svg"
+                        data-src="images/icons/plus.svg"
+                      ></i>
+                    </button>
+                  </div>
+                  <p class="item-price">250.00 EGP</p>
+                </div>
+              </div>
+            </div>
+            <!-- end cart item -->
+          </div>
+          <!-- end cart items -->
+          <div class="cart-total-container">
+            <p class="text mb-0">TOTAL</p>
+            <p class="amount mb-0">750.00 EGP</p>
+          </div>
+          <button type="button" id="close_cart_btn" class="btn close-cart-btn">
+            <i class="convert-svg" data-src="images/icons/x.svg"></i>
+          </button>
+          <button type="submit" class="btn btn-style-1 w-100">CHECK OUT</button>
+        </form>
+      </div>
+      <!-- end mobile header -->
     </header>
     <!--END HEADER -->
 
@@ -379,7 +581,320 @@
     </main>
 
     <!--FOOTER-->
-    <footer></footer>
+    <footer>
+      <div id="desktop_footer" class="d-none d-md-block">
+        <div class="footer-strip">
+          <span>Products and Prices are not subjected to 14% tax</span>
+          <span>Products and Prices are not subjected to 14% tax</span>
+          <span>Products and Prices are not subjected to 14% tax</span>
+        </div>
+        <div class="main-footer">
+          <div class="container py-4">
+            <div class="row">
+              <!-- logos -->
+              <div class="col-3">
+                <a href="filter.html">
+                  <img
+                    class="lazy mb-3 footer-img"
+                    data-src="https://via.placeholder.com/300x110"
+                    alt=""
+                  />
+                </a>
+                <a href="living.html">
+                  <img
+                    class="lazy footer-img"
+                    data-src="https://via.placeholder.com/300x110"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <!-- end logos -->
+              <div class="col-9">
+                <div class="row mb-5">
+                  <!-- footer column -->
+                  <div class="col-3">
+                    <h5 class="column-title">Contact Us</h5>
+                    <a href="contact-us.html" class="column-link">Contact Us</a>
+                    <a href="tel: +20 123 456 7891" class="column-link"
+                      >+20 123 456 7891</a
+                    >
+                  </div>
+                  <!-- end footer column -->
+                  <!-- footer column -->
+                  <div class="col-3">
+                    <h5 class="column-title">
+                      Order Tracking & Schedule Delivery
+                    </h5>
+                    <a href="#" class="column-link">Track Order</a>
+                    <a href="tel: +20 123 456 7891" class="column-link"
+                      >+20 123 456 7891</a
+                    >
+                  </div>
+                  <!-- end footer column -->
+                  <!-- footer column -->
+                  <div class="col-3">
+                    <h5 class="column-title">Resources</h5>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#editProfileModal"
+                      class="column-link"
+                      >My Account</a
+                    >
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#privacyPolicyModal"
+                      class="column-link"
+                      >Privacy Policy</a
+                    >
+                  </div>
+                  <!-- end footer column -->
+                  <!-- footer column -->
+                  <div class="col-3">
+                    <h5 class="column-title">Our Company</h5>
+                    <a href="about-us.html" class="column-link">About Us</a>
+                    <a href="faqs.html" class="column-link">FAQs</a>
+                  </div>
+                  <!-- end footer column -->
+                </div>
+                <form action="#" id="desktop_footer_subscription_form">
+                  <button
+                    type="submit"
+                    class="btn btn-style-1 bg-black hover-effect"
+                  >
+                    SUBSCRIBE NOW
+                  </button>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="mobile_email"
+                    placeholder="Enter your email.."
+                    required
+                  />
+                </form>
+              </div>
+            </div>
+            <div class="taxes-info-container">
+              <div class="taxes-info-text">
+                Tax ID Number: <span id="tax_id_number">########</span> Segel
+                Togary: <span id="segel_number">########</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mobile_footer" class="d-block d-md-none">
+        <div class="mobile-footer-info-container">
+          <form action="#" id="mobile_subscription_form">
+            <h6 class="form-title">SIGN UP FOR EMAILS</h6>
+            <div class="form-field-container">
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  placeholder="ENTER EMAIL ADDRESS"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-style-1">SUBMIT</button>
+            </div>
+          </form>
+          <div class="privacy-info">
+            <a
+              href="#"
+              class="info-link"
+              data-toggle="modal"
+              data-target="#privacyPolicyModal"
+              >Click here</a
+            >
+            <span>to read our privacy notice. Or</span>
+            <a href="contact-us.html" class="info-link">Contact Us</a>
+          </div>
+          <div id="mobile_footer_accordion">
+            <!-- mobile footer card btn -->
+            <div class="card">
+              <div class="card-header" id="mobileFooterBtnOne">
+                <button
+                  class="btn mobile-footer-btn collapsed"
+                  data-toggle="collapse"
+                  data-target="#mobileFooterCollapseOne"
+                  aria-expanded="true"
+                  aria-controls="mobileFooterCollapseOne"
+                >
+                  <span>Contact Us</span>
+                  <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                </button>
+              </div>
+              <div
+                id="mobileFooterCollapseOne"
+                class="collapse"
+                aria-labelledby="mobileFooterBtnOne"
+                data-parent="#mobile_footer_accordion"
+              >
+                <div class="card-body">
+                  <ul class="mobile-footer-links-container">
+                    <li class="mobile-footer-link-container">
+                      <a href="contact-us.html" class="mobile-footer-link"
+                        >Contact Us</a
+                      >
+                      <a href="tel:01225464214" class="mobile-footer-link"
+                        >+20 122 5464 214</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end mobile footer card btn -->
+            <!-- mobile footer card btn -->
+            <div class="card">
+              <div class="card-header" id="mobileFooterBtnTwo">
+                <button
+                  class="btn mobile-footer-btn collapsed"
+                  data-toggle="collapse"
+                  data-target="#mobileFooterCollapseTwo"
+                  aria-expanded="true"
+                  aria-controls="mobileFooterCollapseTwo"
+                >
+                  <span>Order Tracking & Schedule Delivery</span>
+                  <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                </button>
+              </div>
+              <div
+                id="mobileFooterCollapseTwo"
+                class="collapse"
+                aria-labelledby="mobileFooterBtnTwo"
+                data-parent="#mobile_footer_accordion"
+              >
+                <div class="card-body">
+                  <ul class="mobile-footer-links-container">
+                    <li class="mobile-footer-link-container">
+                      <a href="#" class="mobile-footer-link">Track Order</a>
+                      <a href="tel:01225464214" class="mobile-footer-link"
+                        >+20 122 5464 214</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end mobile footer card btn -->
+            <!-- mobile footer card btn -->
+            <div class="card">
+              <div class="card-header" id="mobileFooterBtnThree">
+                <button
+                  class="btn mobile-footer-btn collapsed"
+                  data-toggle="collapse"
+                  data-target="#mobileFooterCollapseThree"
+                  aria-expanded="true"
+                  aria-controls="mobileFooterCollapseThree"
+                >
+                  <span>Resources</span>
+                  <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                </button>
+              </div>
+              <div
+                id="mobileFooterCollapseThree"
+                class="collapse"
+                aria-labelledby="mobileFooterBtnThree"
+                data-parent="#mobile_footer_accordion"
+              >
+                <div class="card-body">
+                  <ul class="mobile-footer-links-container">
+                    <li class="mobile-footer-link-container">
+                      <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#editProfileModal"
+                        class="mobile-footer-link"
+                        >Edit Account</a
+                      >
+                      <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#privacyPolicyModal"
+                        class="mobile-footer-link"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end mobile footer card btn -->
+            <!-- mobile footer card btn -->
+            <div class="card">
+              <div class="card-header" id="mobileFooterBtnFour">
+                <button
+                  class="btn mobile-footer-btn collapsed"
+                  data-toggle="collapse"
+                  data-target="#mobileFooterCollapseFour"
+                  aria-expanded="true"
+                  aria-controls="mobileFooterCollapseFour"
+                >
+                  <span>Our Company</span>
+                  <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                </button>
+              </div>
+              <div
+                id="mobileFooterCollapseFour"
+                class="collapse"
+                aria-labelledby="mobileFooterBtnFour"
+                data-parent="#mobile_footer_accordion"
+              >
+                <div class="card-body">
+                  <ul class="mobile-footer-links-container">
+                    <li class="mobile-footer-link-container">
+                      <a href="about-us.html" class="mobile-footer-link"
+                        >About Us</a
+                      >
+                      <a href="faqs.html" class="mobile-footer-link">FAQs</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end mobile footer card btn -->
+          </div>
+          <div
+            class="mobile-footer-logo-container d-flex justify-content-center align-items-center"
+          >
+            <a href="index.html" class="mobile-footer-logo">
+              <img
+                class="lazy"
+                data-src="https://via.placeholder.com/155x50"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="mobile-footer-social-media-icons">
+            <a
+              href="https://instagram.com/joez_designs?igshid=4i3gl74qsucd"
+              target="_blank"
+              class="social-media-item"
+            >
+              <i class="convert-svg" data-src="images/icons/instagram.svg"></i>
+              <span class="social-media-text">Joez_designs</span>
+            </a>
+            <a
+              href="https://www.facebook.com/Joez.Designss"
+              target="_blank"
+              class="social-media-item"
+            >
+              <i
+                class="convert-svg"
+                data-src="images/icons/facebook-colored.svg"
+              ></i>
+              <span class="social-media-text">Joez.designss</span>
+            </a>
+          </div>
+        </div>
+        <div class="mobile-footer-last-section"></div>
+      </div>
+    </footer>
     <!--END FOOTER-->
 
     <!-- BACK TO TOP BTN -->
@@ -864,6 +1379,352 @@
       </div>
     </div>
     <!-- END SUBSCRIPTION MODAL -->
+
+    <!-- USER FEEDBACK MODAL -->
+    <div
+      class="modal fade modal-style-5"
+      id="userFeedbackModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="userFeedbackModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="btn close-modal-btn"
+              data-dismiss="modal"
+            >
+              <i class="convert-svg" data-src="images/icons/x.svg"></i>
+            </button>
+            <div class="logo-img-container">
+              <img
+                class="lazy"
+                data-src="https://via.placeholder.com/155x50"
+                alt=""
+              />
+            </div>
+            <form action="#" id="user_feedback_form">
+              <p class="form-text-info">
+                How likely are you to recommend Joez Designs to a friend or
+                colleague?
+              </p>
+              <div class="radios-container">
+                <div class="radios">
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="1"
+                    required
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="2"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="3"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="4"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="5"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="6"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="7"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="8"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="9"
+                  />
+                  <input
+                    type="radio"
+                    class="radio radio-style-1"
+                    name="feedback"
+                    value="10"
+                  />
+                </div>
+                <div class="info-text">
+                  <p class="info mb-0">Not at all</p>
+                  <p class="info mb-0">Extremely likely</p>
+                </div>
+              </div>
+              <p class="form-text-info">
+                Please choose a category you would like to leave a feedback
+                about
+              </p>
+              <div class="form-group">
+                <select class="custom-select" required>
+                  <option value="" selected>Choose..</option>
+                  <option value="1">Service</option>
+                  <option value="2">Shipping</option>
+                </select>
+              </div>
+              <div
+                class="submit-btn-container d-flex justify-content-center align-items-center"
+              >
+                <button type="submit" class="btn btn-style-1">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END USER FEEDBACK MODAL -->
+
+    <!-- MOBILE MENU -->
+    <div id="mobile_menu_wrapper">
+      <div id="mobile_menu">
+        <button
+          type="button"
+          id="close_mobile_menu_btn"
+          class="btn close-mobile-menu-btn"
+        >
+          <i class="convert-svg" data-src="images/icons/x.svg"></i>
+        </button>
+        <div class="mobile-menu-body">
+          <ul class="mobile-menu-links">
+            <li class="mobile-menu-link active">
+              <a href="index.html" class="link">Home</a>
+            </li>
+            <li class="mobile-menu-link">
+              <a href="wishlist.html" class="link">Wishlist</a>
+            </li>
+            <div id="mobile_menu_accordion">
+              <div class="card">
+                <div class="card-header mobile-menu-link" id="headingThree">
+                  <button
+                    class="btn link collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <span>Profile</span>
+                    <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                  </button>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#mobile_menu_accordion"
+                >
+                  <div class="card-body">
+                    <ul class="mobile-menu-dropdown-links">
+                      <li class="mobile-menu-dropdown-group">
+                        <a
+                          href="#"
+                          data-toggle="modal"
+                          data-target="#editProfileModal"
+                          class="link-text"
+                          >Edit Profile</a
+                        >
+                        <a href="orders.html" class="link-text">My orders</a>
+                        <a href="#" class="link-text">Log out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header mobile-menu-link" id="headingOne">
+                  <button
+                    class="btn link collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <span>Products</span>
+                    <i class="convert-svg" data-src="images/icons/plus.svg"></i>
+                  </button>
+                </div>
+                <div
+                  id="collapseOne"
+                  class="collapse"
+                  aria-labelledby="headingOne"
+                  data-parent="#mobile_menu_accordion"
+                >
+                  <div class="card-body">
+                    <ul class="mobile-menu-dropdown-links">
+                      <li class="mobile-menu-dropdown-group">
+                        <h6 class="main-category-title">Furniture</h6>
+                        <a href="filter.html" class="link-text">Title 1</a>
+                        <a href="filter.html" class="link-text">Title 2</a>
+                        <a href="filter.html" class="link-text">Title 3</a>
+                      </li>
+                      <li class="mobile-menu-dropdown-group">
+                        <h6 class="main-category-title">Kitchen</h6>
+                        <a href="filter.html" class="link-text">Platters</a>
+                        <a href="filter.html" class="link-text"
+                          >Serving Trays</a
+                        >
+                        <a href="filter.html" class="link-text"
+                          >Customized Platters</a
+                        >
+                        <a href="filter.html" class="link-text"
+                          >Cutting Boards</a
+                        >
+                        <a href="filter.html" class="link-text"
+                          >Customized Cutting Boards</a
+                        >
+                        <a href="filter.html" class="link-text">Kitchen Sets</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <li class="mobile-menu-link">
+              <a href="faqs.html" class="link">FAQs</a>
+            </li>
+            <li class="mobile-menu-link">
+              <a
+                href="#"
+                data-toggle="modal"
+                data-target="#shopAndShipModal"
+                class="link"
+                >Region & Currency</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END MOBILE MENU -->
+
+    <!-- SEARCH POPUP -->
+    <div id="search_popup">
+      <button type="button" class="btn close-search-btn">
+        <i class="convert-svg" data-src="images/icons/x.svg"></i>
+      </button>
+      <form action="#" id="search_form">
+        <div class="input-container">
+          <input class="form-control" type="text" placeholder="Search.." />
+          <i
+            class="convert-svg"
+            data-src="images/icons/magnifying-glass.svg"
+          ></i>
+        </div>
+      </form>
+      <p class="search-results-text no-results-text d-none">No Resuls Found</p>
+      <p class="search-results-text">
+        Results for <span id="search_keyword">“Bathroom”</span>
+      </p>
+      <div class="search-results">
+        <!-- group -->
+        <div class="search-result-group">
+          <h6 class="group-title">Products</h6>
+          <!-- item -->
+          <div class="group-item">
+            <a href="product-details.html" class="img-container">
+              <img
+                class="lazy"
+                data-src="https://via.placeholder.com/97x97"
+                alt=""
+              />
+            </a>
+            <div class="item-text-container">
+              <a href="filter.html" class="item-category">Soap Plates</a>
+              <a href="product-details.html" class="item-title mb-0"
+                >Lorem Ipsum</a
+              >
+            </div>
+          </div>
+          <!-- end item -->
+          <!-- item -->
+          <div class="group-item">
+            <a href="product-details.html" class="img-container">
+              <img
+                class="lazy"
+                data-src="https://via.placeholder.com/97x97"
+                alt=""
+              />
+            </a>
+            <div class="item-text-container">
+              <a href="filter.html" class="item-category">Bathroom Sets</a>
+              <a href="product-details.html" class="item-title mb-0"
+                >Lorem Ipsum</a
+              >
+            </div>
+          </div>
+          <!-- end item -->
+        </div>
+        <!-- end group -->
+        <!-- group -->
+        <div class="search-result-group">
+          <h6 class="group-title">Living</h6>
+          <!-- item -->
+          <div class="group-item">
+            <a href="product-details.html" class="img-container">
+              <img
+                class="lazy"
+                data-src="https://via.placeholder.com/97x97"
+                alt=""
+              />
+            </a>
+            <div class="item-text-container">
+              <a href="filter.html" class="item-category">Sinks</a>
+              <a href="product-details.html" class="item-title mb-0"
+                >Lorem Ipsum</a
+              >
+            </div>
+          </div>
+          <!-- end item -->
+          <!-- item -->
+          <div class="group-item">
+            <a href="product-details.html" class="img-container">
+              <img
+                class="lazy"
+                data-src="https://via.placeholder.com/97x97"
+                alt=""
+              />
+            </a>
+            <div class="item-text-container">
+              <a href="filter.html" class="item-category">Engravers</a>
+              <a href="product-details.html" class="item-title mb-0"
+                >Lorem Ipsum</a
+              >
+            </div>
+          </div>
+          <!-- end item -->
+        </div>
+        <!-- end group -->
+      </div>
+    </div>
+    <!-- END SEARCH POPUP -->
 
     <!-- BASE JS-->
     <script src="js/jquery-3.4.1.min.js"></script>

@@ -1,0 +1,176 @@
+#mobile_menu_wrapper {
+  position: absolute;
+  top: 0;
+  #{$start-direction}: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: rgba($color-black-2, .57);
+  @include transition(all .3s ease-in-out);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  &.show {
+      opacity: 1;
+      visibility: visible;
+  }
+  #mobile_menu {
+      position: absolute;
+      top: 0;
+      #{$start-direction}: -100%;
+      width: 70%;
+      height: 100%;
+      padding: 24px;
+      background: $color-white;
+      @include transition(all .3s ease-in-out);
+      &.show {
+          #{$start-direction}: 0;
+      }
+      .close-mobile-menu-btn {
+          margin-bottom: 30px;
+          padding: 0;
+          width: 18px;
+          height: 18px;
+          border: none;
+          background: transparent;
+          svg {
+              width: 100%;
+              height: 100%;
+              color: $color-black;
+          }
+      }
+      .mobile-menu-body {
+          max-height: calc(100vh - 85px);
+          overflow-y: auto;
+          &::-webkit-scrollbar {
+              width: 0px;
+              background: transparent;
+              display: none;
+          }
+          .mobile-menu-links {
+              margin: 0;
+              padding: 0;
+              .mobile-menu-link {
+                  list-style: none;
+                  position: relative;
+                  border-bottom: 2px solid $color-grey-7;
+                  padding-bottom: 20px;
+                  width: 100%;
+                  margin-bottom: 20px;
+                  .link {
+                      color: $color-black;
+                      font-weight: 600;
+                      font-size: 16px;
+                      @include transition(all .3s ease-in-out);
+                  }
+                  &.active {
+                      .link {
+                          color: $color-purple;
+                      }
+                  }
+              }
+              #mobile_menu_accordion {
+                  .card {
+                      border: none;
+                      padding: 0;
+                      margin-bottom: 20px;
+                      border-bottom: 2px solid $color-grey-7;
+                      .card-header {
+                          padding: 0;
+                          margin: 0;
+                          background: transparent;
+                          border: none;
+                          .btn.link {
+                              width: 100%;
+                              padding: 0;
+                              padding-bottom: 20px;
+                              display: flex;
+                              align-items: center;
+                              justify-content: space-between;
+                              span {
+                                  @include transition(all .3s ease-in-out);
+                                  font-weight: 600;
+                              }
+                              svg {
+                                  width: 18px;
+                                  height: 18px;
+                                  color: $color-purple;
+                                  @include transition(all .3s ease-in-out);
+                              }
+                              &:not(.collapsed) {
+                                  svg {
+                                      transform: rotate(45deg);
+                                  }
+                                  span {
+                                      color: $color-purple;
+                                  }
+                              }
+                          }
+                      }
+                      .card-body {
+                          padding: 0;
+                          padding-bottom: 20px;
+                          .mobile-menu-dropdown-links {
+                              padding-#{$start-direction}: 12px;
+                              .mobile-menu-dropdown-group {
+                                  list-style: none;
+                                  &:not(:last-child) {
+                                      margin-bottom: 20px;
+                                  }
+                                  .main-category-title {
+                                      white-space: nowrap;
+                                      color: $color-black;
+                                      font-size: 18px;
+                                      font-weight: 600;
+                                      margin-bottom: 12px;
+                                  }
+                                  .link-text {
+                                      padding-#{$start-direction}: 12px;
+                                      display: block;
+                                      color: $color-black;
+                                      font-size: 14px;
+                                      font-weight: 400;
+                                      color: $color-purple;
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+          .mobile-currency-form {
+              margin-bottom: 40px;
+              .form-title {
+                  color: $color-black;
+                  font-weight: 600;
+                  font-size: 16px;
+                  margin-bottom: 16px;
+              }
+              .form-group {
+                  position: relative;
+                  width: 100%;
+                  select {
+                      width: 100%;
+                      color: $color-grey-8;
+                      border: none;
+                      appearance: none;
+                      padding-#{$start-direction}: 0;
+                      padding-#{$end-direction}: 0;
+                      &:focus {
+                          box-shadow: none;
+                      }
+                  }
+                  svg {
+                      width: 14px;
+                      height: 14px;
+                      color: $color-grey-8;
+                      position: absolute;
+                      top: 50%;
+                      transform: translateY(-50% * $transform-direction);
+                      #{$end-direction}: 0;
+                  }
+              }
+          }
+      }
+  }
+}
