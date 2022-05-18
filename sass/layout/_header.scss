@@ -561,9 +561,6 @@ header {
                 &:not(:last-child) {
                   margin-bottom: 14px;
                 }
-                &:last-child {
-                  text-decoration: underline;
-                }
                 &::after {
                   content: "";
                   position: absolute;
@@ -575,8 +572,11 @@ header {
                   width: 0;
                   @include transition(all 0.2s ease-in-out);
                 }
-                &:not(:last-child):hover::after {
+                &:not(.underlined):hover:after {
                   width: 100%;
+                }
+                &.underlined {
+                  text-decoration: underline;
                 }
               }
             }
