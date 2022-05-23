@@ -168,6 +168,13 @@ $(document).ready(function () {
       $(this).prop("disabled", true);
     }
   });
+
+  // alert
+  $(".alert.alert-1")
+    .find("button.alert__btn")
+    .on("click", function () {
+      $(this).closest(".alert.alert-1").removeClass("show");
+    });
 });
 
 function convertSvgToIcon($img) {
@@ -233,3 +240,10 @@ function decrement(element) {
 
   return false;
 }
+
+const showAlert = (type, message) => {
+  const alert = $(".alert.alert-1");
+  alert.addClass(type);
+  alert.find(".alert__message").text(message);
+  alert.addClass("show");
+};
