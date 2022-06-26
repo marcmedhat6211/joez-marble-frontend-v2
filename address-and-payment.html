@@ -480,10 +480,10 @@
 
     <main>
       <!--BODY-->
-      <div id="address_and_payment_page" class="py-5">
+      <form id="address_and_payment_page" class="py-5 address-and-payment-form">
         <div class="container">
           <h2 class="section-title">Add Shipping Address</h2>
-          <form class="section-box" action="#" id="address_form">
+          <div class="section-box" action="#" id="address_form">
             <div class="row">
               <div class="col-12 col-md-4 mb-4 mb-md-0">
                 <div class="row">
@@ -610,7 +610,7 @@
                 </div>
               </div>
             </div>
-          </form>
+          </div>
 
           <h2 class="section-title">Payment Details</h2>
           <div class="section-box" id="payment_details_cotainer">
@@ -629,7 +629,7 @@
                     <span class="detail-title">Shipping Amount: </span>
                     <span class="detail-description">30 EGP</span>
                   </p>
-                  <form
+                  <div
                     action="#"
                     class="coupon-code-section"
                     id="coupon_code_form"
@@ -658,11 +658,11 @@
                     <button type="submit" class="btn btn-style-1 hover-effect">
                       Apply Code
                     </button>
-                  </form>
+                  </div>
                 </div>
               </div>
               <div class="col-12 col-md-6 offset-md-3">
-                <form action="#" class="payment-amounts-section">
+                <div action="#" class="payment-amounts-section">
                   <div class="payment-amount subtotal">
                     <span class="payment-amount-title">Subtotal:</span>
                     <span class="payment-amount-value">1,000 EGP</span>
@@ -684,12 +684,12 @@
                       Place Order
                     </button>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
       <!--END BODY-->
     </main>
 

@@ -42,4 +42,13 @@
             padding-#{$end-direction}: 35px;
         }
     }
+
+    ul {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     li {
+      color: red;
+     } 
+    }
 }

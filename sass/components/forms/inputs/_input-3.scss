@@ -31,4 +31,12 @@
       height: 16px;
     }
   }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      color: red;
+    }
+  }
 }
