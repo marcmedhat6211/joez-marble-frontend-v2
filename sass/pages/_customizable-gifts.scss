@@ -20,6 +20,7 @@
     color: $color-black;
     margin-bottom: 18px;
   }
+
   .shapes-block {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -44,12 +45,31 @@
       }
     }
   }
+
+  .icons-block {
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+    gap: 20px;
+    svg {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+
   .text-block {
     .text-block-input-container {
       position: relative;
       margin: 0;
+      display: flex;
+      align-items: center;
       input {
         border: 2px solid $color-grey-8;
+        margin-#{$end-direction}: 8px;
+        width: 90%;
         @include transition(all 0.2s ease-in-out);
         font-size: 12px;
         &::placeholder {
@@ -60,11 +80,95 @@
           border-color: $color-black;
         }
       }
+      .sp-replacer.sp-light {
+        width: 10%;
+        padding: 0;
+        border: 2px solid $color-grey-8;
+        height: 100%;
+        .sp-preview {
+          width: 100%;
+        }
+        .sp-dd {
+          display: none;
+        }
+      }
       small.form-text {
         font-size: 13px;
         position: absolute;
         top: -25px;
-        #{$end-direction}: 0;
+        #{$end-direction}: calc(10% + 8px);
+      }
+    }
+  }
+
+  #shape {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // position: relative;
+    border-radius: 50%;
+    padding: 40px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    svg {
+      width: 80%;
+      height: 80%;
+    }
+
+    .shape__content {
+      position: absolute;
+      top: 50%;
+      #{$start-direction}: 50%;
+      transform: translate(-50%, -50%);
+
+      &.shape-text {
+        font-size: 26px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .page-btn {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+    outline: none;
+    svg {
+      color: $color-black;
+      width: 60px;
+      height: 60px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      background-color: $color-black;
+      svg {
+        color: $color-white;
+      }
+    }
+
+    &.move-btn {
+      position: absolute;
+      &.up {
+        top: 2px;
+      }
+      &.right {
+        right: 20px;
+      }
+      &.down {
+        bottom: 2px;
+      }
+      &.left {
+        left: 20px;
       }
     }
   }

@@ -15257,12 +15257,26 @@ header #mobile_header .mobile-cart .cart-total-container .amount {
   background: rgba(196, 196, 196, 0.4);
   border-color: #000000;
 }
+#cutomizable_gifts_page .icons-block {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  gap: 20px;
+}
+#cutomizable_gifts_page .icons-block svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
 #cutomizable_gifts_page .text-block .text-block-input-container {
   position: relative;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 #cutomizable_gifts_page .text-block .text-block-input-container input {
   border: 2px solid #c4c4c4;
+  margin-right: 8px;
+  width: 90%;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -15279,11 +15293,88 @@ header #mobile_header .mobile-cart .cart-total-container .amount {
   box-shadow: none;
   border-color: #000000;
 }
+#cutomizable_gifts_page .text-block .text-block-input-container .sp-replacer.sp-light {
+  width: 10%;
+  padding: 0;
+  border: 2px solid #c4c4c4;
+  height: 100%;
+}
+#cutomizable_gifts_page .text-block .text-block-input-container .sp-replacer.sp-light .sp-preview {
+  width: 100%;
+}
+#cutomizable_gifts_page .text-block .text-block-input-container .sp-replacer.sp-light .sp-dd {
+  display: none;
+}
 #cutomizable_gifts_page .text-block .text-block-input-container small.form-text {
   font-size: 13px;
   position: absolute;
   top: -25px;
-  right: 0;
+  right: calc(10% + 8px);
+}
+#cutomizable_gifts_page #shape {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#cutomizable_gifts_page #shape svg {
+  width: 80%;
+  height: 80%;
+}
+#cutomizable_gifts_page #shape .shape__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#cutomizable_gifts_page #shape .shape__content.shape-text {
+  font-size: 26px;
+  font-weight: 600;
+}
+#cutomizable_gifts_page .page-btn {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+#cutomizable_gifts_page .page-btn svg {
+  color: #000000;
+  width: 60px;
+  height: 60px;
+  transition: all 0.2s ease-in-out;
+}
+#cutomizable_gifts_page .page-btn:hover {
+  background-color: #000000;
+}
+#cutomizable_gifts_page .page-btn:hover svg {
+  color: #ffffff;
+}
+#cutomizable_gifts_page .page-btn.move-btn {
+  position: absolute;
+}
+#cutomizable_gifts_page .page-btn.move-btn.up {
+  top: 2px;
+}
+#cutomizable_gifts_page .page-btn.move-btn.right {
+  right: 20px;
+}
+#cutomizable_gifts_page .page-btn.move-btn.down {
+  bottom: 2px;
+}
+#cutomizable_gifts_page .page-btn.move-btn.left {
+  left: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
