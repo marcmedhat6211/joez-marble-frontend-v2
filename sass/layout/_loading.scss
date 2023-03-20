@@ -17,6 +17,39 @@
     #{$start-direction}: 0;
     width: 100%;
     height: 100%;
+    background-image: url("../images/icons/spinner.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 50px;
+    animation: spin 1s linear infinite;
+    z-index: 9999;
+  }
+
+  &.dark-bg {
+    &::after {
+      background-image: url("../images/icons/spinner-white.svg");
+    }
+  }
+}
+
+.component-loading {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    #{$start-direction}: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black, 0.1);
+    z-index: 9999;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    #{$start-direction}: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("../../images/icons/spinner.svg");
     background-repeat: no-repeat;
     background-position: center;

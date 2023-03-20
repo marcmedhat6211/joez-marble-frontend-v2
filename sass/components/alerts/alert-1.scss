@@ -8,7 +8,7 @@
   z-index: 20;
   border-radius: 0;
   margin: 0;
-  @include transition(all .3s ease-in-out);
+  @include transition(all 0.3s ease-in-out);
   &.show {
     bottom: 0;
   }
@@ -35,14 +35,14 @@
   }
 
   &.success {
-    background: rgba(green, .4);
+    background: rgba(green, 0.8);
   }
 
   &.error {
-    background: rgba(red, .4);
+    background: rgba(red, 0.8);
   }
 
   &.warning {
-    background: rgba(orange, .4);
+    background: rgba(orange, 0.8);
   }
 }

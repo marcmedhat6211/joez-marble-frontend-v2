@@ -7,6 +7,7 @@ const productCard = $(".card.card-style-1");
 const mobileMenuWrapper = $("#mobile_menu_wrapper");
 const mobileMenu = $("#mobile_menu");
 const searchPopup = $("#search_popup");
+const body = $("body");
 $(document).ready(function () {
   //lazy loading
   if ($("img.lazy").length > 0) {
