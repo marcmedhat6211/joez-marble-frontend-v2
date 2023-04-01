@@ -81,8 +81,24 @@ $(document).ready(function () {
   //================================================ END CHANGE THE POSITION OF THE SHAPE CONTENT USING ARROWS ==============================================
 
   //================================================ ADD ICONS TO SHAPE ==============================================
-
+  $("body").on("click", "#icons_block .icon", function () {
+    const icon = $(this);
+    const path = icon.attr("id");
+    $("#shape .shape__content.shape-icon").empty();
+    drawIcon(path, $("#shape .shape__content.shape-icon"));
+    convertSvgToIcon($("#shape .shape__content.shape-icon i"));
+  });
   //================================================ END ADD ICONS TO SHAPE ==============================================
+
+  //================================================ FILL ICONS IN SHAPE ==============================================
+  $("body").on("change", "#fill_shape", function () {
+    if ($(this).is(":checked")) {
+      $("#shape .shape__content.shape-icon").addClass("filled");
+    } else {
+      $("#shape .shape__content.shape-icon").removeClass("filled");
+    }
+  });
+  //================================================ END FILL ICONS IN SHAPE ==============================================
 });
 
 const setCharsLimitHandler = () => {
@@ -102,4 +118,13 @@ const drawMainShape = (svgName, containerElement) => {
 
 const convertCssPropertyInPxToInt = (cssProperty) => {
   return parseInt(cssProperty.replace("px", ""));
+};
+
+const drawIcon = (iconPath, destinationContainer) => {
+  const icon = $("<i>").attr({
+    class: "convert-svg",
+    "data-src": iconPath,
+  });
+
+  icon.appendTo(destinationContainer);
 };
