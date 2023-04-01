@@ -107,13 +107,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // position: relative;
+    position: relative;
     border-radius: 50%;
-    padding: 40px;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-    svg {
+    padding: 60px;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0.19);
+    overflow: hidden;
+    .shape-figure__container {
       width: 80%;
       height: 80%;
+      overflow: hidden;
+      position: relative;
+      #shape_figure {
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../images/gifts/marbles/18-karat.png");
+        background-clip: border-box;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-clip: content-box;
+      }
+      .shape__marble-image {
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .shape__content {
@@ -125,6 +143,11 @@
       &.shape-text {
         font-size: 26px;
         font-weight: 600;
+        z-index: 10;
+        // text-shadow: -1px -1px 1px #000;
+        // text-shadow: 2px 5px 5px rgba(255, 255, 255, 0.3);
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+          0px -1px 0px rgba(0, 0, 0, 0.7);
       }
     }
   }
@@ -142,6 +165,7 @@
     padding: 0;
     border: 0;
     outline: none;
+    z-index: 10;
     svg {
       color: $color-black;
       width: 60px;

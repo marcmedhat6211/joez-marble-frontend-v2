@@ -34,7 +34,7 @@ $(document).ready(function () {
   $("body").on("click", ".page-block .shapes-block .shape", function () {
     const svgName = $(this).data("svg-name");
     $("#shape #shape_figure").remove();
-    drawMainShape(svgName, $("#shape"));
+    drawMainShape(svgName, $("#shape .shape-figure__container"));
     convertSvgToIcon($("i#shape_figure"));
     $(".form-check.shape").removeClass("checked");
     $(this).addClass("checked");
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
   //================================================ CHANGE THE POSITION OF THE SHAPE CONTENT USING ARROWS ==============================================
   $("body").on("mousedown", "#shape .page-btn.move-btn", function () {
-    const shapeContent = $("#shape .shape__content");
+    const shapeContent = $("#shape .shape__content.shape-text");
     if ($(this).hasClass("up")) {
       shapeContent.css({
         top: `${convertCssPropertyInPxToInt(shapeContent.css("top")) - 5}px`,
