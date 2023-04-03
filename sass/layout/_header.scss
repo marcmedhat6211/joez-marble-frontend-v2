@@ -382,6 +382,7 @@ header {
           align-items: center;
           .icon-container {
             position: relative;
+            z-index: 100;
             &:not(:last-child) {
               margin-#{$end-direction}: 52px;
             }
@@ -469,6 +470,7 @@ header {
                 padding: 32px 40px;
                 #{$end-direction}: 0;
                 top: 50px;
+                z-index: 100;
                 .items-container {
                   max-height: calc(551px - 92px);
                   overflow: auto;

@@ -47,16 +47,30 @@
   }
 
   .icons-block {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-    gap: 20px;
-    svg {
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    gap: 5px;
+    .icon-container {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        background-color: $color-black;
+        svg {
+          color: $color-white;
+        }
+      }
     }
   }
 
@@ -112,6 +126,7 @@
     padding: 60px;
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0.19);
     overflow: hidden;
+    margin-bottom: 30px;
     .shape-figure__container {
       width: 80%;
       height: 80%;
@@ -121,11 +136,6 @@
         z-index: 10;
         width: 100%;
         height: 100%;
-        background-image: url("../../images/gifts/marbles/18-karat.png");
-        background-clip: border-box;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-clip: content-box;
       }
       .shape__marble-image {
         z-index: -1;
@@ -155,8 +165,14 @@
           width: 80px;
           height: 80px;
         }
-        &.filled {
-          svg {
+        &.icon-filled {
+          svg.icon-type {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &.number-filled {
+          svg.number-type {
             width: 100%;
             height: 100%;
           }
@@ -178,7 +194,7 @@
     padding: 0;
     border: 0;
     outline: none;
-    z-index: 10;
+    z-index: 5;
     svg {
       color: $color-black;
       width: 60px;
@@ -206,6 +222,44 @@
       }
       &.left {
         left: 20px;
+      }
+    }
+  }
+
+  #slider_container {
+    position: relative;
+    #marbles_slider {
+      .marble-container {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        border: 4px solid transparent;
+        transition: all 0.2s ease-in-out;
+        &:hover,
+        &.active {
+          border-color: $color-black;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .swiper-btns-container {
+      .swiper-btn-next-marbles,
+      .swiper-btn-prev-marbles {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .swiper-btn-next-marbles {
+        right: 0;
+      }
+      .swiper-btn-prev-marbles {
+        left: 0;
       }
     }
   }

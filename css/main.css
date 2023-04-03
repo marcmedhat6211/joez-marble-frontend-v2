@@ -8764,7 +8764,8 @@ header #desktop_header #header_part_two {
       display: flex;
       align-items: center; }
       header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container {
-        position: relative; }
+        position: relative;
+        z-index: 100; }
         header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container:not(:last-child) {
           margin-right: 52px; }
         header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .icon-btn {
@@ -8842,7 +8843,8 @@ header #desktop_header #header_part_two {
             max-height: 581px;
             padding: 32px 40px;
             right: 0;
-            top: 50px; }
+            top: 50px;
+            z-index: 100; }
             header #desktop_header #header_part_two .main-header .desktop-icons-container .icon-container .icon-dropdown.items-dropdown .items-container {
               max-height: calc(551px - 92px);
               overflow: auto;
@@ -12058,12 +12060,25 @@ header #mobile_header {
       border-color: #000000; }
 #cutomizable_gifts_page .icons-block {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-  gap: 20px; }
-  #cutomizable_gifts_page .icons-block svg {
-    width: 30px;
-    height: 30px;
-    cursor: pointer; }
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  gap: 5px; }
+  #cutomizable_gifts_page .icons-block .icon-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #cutomizable_gifts_page .icons-block .icon-container svg {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out; }
+    #cutomizable_gifts_page .icons-block .icon-container:hover {
+      background-color: #000000; }
+      #cutomizable_gifts_page .icons-block .icon-container:hover svg {
+        color: #ffffff; }
 #cutomizable_gifts_page .text-block .text-block-input-container {
   position: relative;
   margin: 0;
@@ -12110,7 +12125,8 @@ header #mobile_header {
   border-radius: 50%;
   padding: 60px;
   box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 30px; }
   #cutomizable_gifts_page #shape .shape-figure__container {
     width: 80%;
     height: 80%;
@@ -12119,12 +12135,7 @@ header #mobile_header {
     #cutomizable_gifts_page #shape .shape-figure__container #shape_figure {
       z-index: 10;
       width: 100%;
-      height: 100%;
-      background-image: url("../../images/gifts/marbles/18-karat.png");
-      background-clip: border-box;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-clip: content-box; }
+      height: 100%; }
     #cutomizable_gifts_page #shape .shape-figure__container .shape__marble-image {
       z-index: -1;
       width: 100%;
@@ -12142,7 +12153,10 @@ header #mobile_header {
     #cutomizable_gifts_page #shape .shape__content.shape-icon svg {
       width: 80px;
       height: 80px; }
-    #cutomizable_gifts_page #shape .shape__content.shape-icon.filled svg {
+    #cutomizable_gifts_page #shape .shape__content.shape-icon.icon-filled svg.icon-type {
+      width: 100%;
+      height: 100%; }
+    #cutomizable_gifts_page #shape .shape__content.shape-icon.number-filled svg.number-type {
       width: 100%;
       height: 100%; }
 #cutomizable_gifts_page .page-btn {
@@ -12158,7 +12172,7 @@ header #mobile_header {
   padding: 0;
   border: 0;
   outline: none;
-  z-index: 10; }
+  z-index: 5; }
   #cutomizable_gifts_page .page-btn svg {
     color: #000000;
     width: 60px;
@@ -12178,5 +12192,30 @@ header #mobile_header {
       bottom: 2px; }
     #cutomizable_gifts_page .page-btn.move-btn.left {
       left: 20px; }
+#cutomizable_gifts_page #slider_container {
+  position: relative; }
+  #cutomizable_gifts_page #slider_container #marbles_slider .marble-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 0.2s ease-in-out; }
+    #cutomizable_gifts_page #slider_container #marbles_slider .marble-container:hover, #cutomizable_gifts_page #slider_container #marbles_slider .marble-container.active {
+      border-color: #000000; }
+    #cutomizable_gifts_page #slider_container #marbles_slider .marble-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  #cutomizable_gifts_page #slider_container .swiper-btns-container .swiper-btn-next-marbles,
+  #cutomizable_gifts_page #slider_container .swiper-btns-container .swiper-btn-prev-marbles {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  #cutomizable_gifts_page #slider_container .swiper-btns-container .swiper-btn-next-marbles {
+    right: 0; }
+  #cutomizable_gifts_page #slider_container .swiper-btns-container .swiper-btn-prev-marbles {
+    left: 0; }
 
 /*# sourceMappingURL=main.css.map */
