@@ -1,65 +1,68 @@
 body {
-    // font-family: $pn-font-anglecia-regular;
-    // background: $color-bg;
-    direction: $direction;
-    text-align: $start-direction;
-    font-size: 14px;
-    position: relative;
+  // font-family: $pn-font-anglecia-regular;
+  // background: $color-bg;
+  direction: $direction;
+  text-align: $start-direction;
+  font-size: 14px;
+  position: relative;
 }
 
 button,
 a {
-    &:focus {
-        outline: none !important;
-        box-shadow: none !important;
-    }
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    background: $color-grey-8;
+  background: $color-grey-8;
 }
 
 .page-title {
-    font-size: 30px;
-    font-weight: 500;
-    color: $color-black;
-    margin-bottom: 0;
+  font-size: 30px;
+  font-weight: 500;
+  color: $color-black;
+  margin-bottom: 0;
 }
 
 .has-active-icon {
-    width: 24px;
-    height: 24px;
-    padding: 0;
-    background-color: transparent;
-    border: 0;
-    outline: none;
-    &.fav-btn {
-        background-image: url(../images/icons/fav-icon.svg);
-        background-size: 42px 26px;
-        background-position: left;
-        background-repeat: no-repeat;
-        &.active {
-            background-position: right;
-        }
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  &.fav-btn {
+    background-image: url(../images/icons/fav-icon.svg);
+    background-size: 48px 48px;
+    background-position: left;
+    background-repeat: no-repeat;
+    &.active {
+      background-position: right;
     }
+  }
+  &.product-card {
+    background-size: 42px 26px;
+  }
 }
 
 .pt-20 {
-    padding-top: 90px;
+  padding-top: 90px;
 }
 
 label.error {
-    font-size: 12px;
-    color: $color-red;
-    align-self: flex-start;
+  font-size: 12px;
+  color: $color-red;
+  align-self: flex-start;
 }
 
 @include media-breakpoint-md {
-    .pt-20 {
-        padding-top: 0;
-    }
+  .pt-20 {
+    padding-top: 0;
+  }
 }
