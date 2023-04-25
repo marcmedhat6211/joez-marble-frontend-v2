@@ -32,10 +32,15 @@ $(document).ready(function () {
 
   //================================================ WHEN CHANGING MAIN SHAPES ==============================================
   $("body").on("click", ".page-block .shapes-block .shape", function () {
+    const shapeFigure = $("#shape #shape_figure");
+    const lastSvgMarbleBg = shapeFigure.find("image").attr("href");
     const svgName = $(this).data("svg-name");
-    $("#shape #shape_figure").remove();
+    shapeFigure.remove();
     drawMainShape(svgName, $("#shape .shape-figure__container"));
     convertSvgToIcon($("i#shape_figure"));
+    if (lastSvgMarbleBg.length > 0) {
+      $("svg#shape_figure").find("image").attr("href", lastSvgMarbleBg);
+    }
     $(".form-check.shape").removeClass("checked");
     $(this).addClass("checked");
   });
@@ -154,14 +159,16 @@ $(document).ready(function () {
   });
   //================================================ END MARBLES SLIDER ==============================================
 
+  //================================================ ADD DEFAULT MARBLE BG AT PAGE START ==============================================
+  connectMarbleImgToSvg($("#shape").data("default-marble-bg"));
+  //================================================ END ADD DEFAULT MARBLE BG AT PAGE START ==============================================
+
   //================================================ HANDLE MARBLES CLICKS ==============================================
   $("body").on("click", "#marbles_slider .marble-container", function () {
     $("#marbles_slider .marble-container").not($(this)).removeClass("active");
     $(this).addClass("active");
     const imgPath = $(this).data("src");
-    const shapeFigureContainer = $(".shape-figure__container");
-    shapeFigureContainer.find(".shape__content.shape__marble-image").remove();
-    drawMarbleBg(imgPath, shapeFigureContainer);
+    connectMarbleImgToSvg(imgPath);
   });
   //================================================ END HANDLE MARBLES CLICKS ==============================================
 
@@ -173,7 +180,14 @@ $(document).ready(function () {
 
   //================================================ HANDLE THE PICTURE SCREENSHOT AND SEND IT TO BACKEND ==============================================
   $("body").on("click", "#submit_gift_btn", function () {
-    takeshot();
+    if (
+      window.confirm(
+        "Are you sure this is the last gift's state that you want to submit ?"
+      )
+    ) {
+      startPageLoading();
+      takeShot();
+    }
   });
   //================================================ END HANDLE THE PICTURE SCREENSHOT AND SEND IT TO BACKEND ==============================================
 });
@@ -206,39 +220,58 @@ const drawIcon = (iconPath, destinationContainer, iconType) => {
   icon.appendTo(destinationContainer);
 };
 
-const drawMarbleBg = (imagePath, destinationContainer) => {
-  const image = $("<img>").attr({
-    class: "shape__content shape__marble-image",
-    src: imagePath,
-    alt: getImageNameFromPath(imagePath),
-  });
-
-  image.appendTo(destinationContainer);
+const connectMarbleImgToSvg = (imgPath) => {
+  const shapeFigureContainer = $(".shape-figure__container");
+  shapeFigureContainer.find("svg image").attr("href", imgPath);
 };
 
-const getImageNameFromPath = (imagePath) => {
-  const imagePathArr = imagePath.split("/");
-  const nameForPath = imagePathArr[imagePathArr.length - 1];
-  const nameForPathArr = nameForPath.split("-");
-  let adjustedNameForPathArr = [];
-  for (const namePart of nameForPathArr) {
-    adjustedNameForPathArr.push(
-      namePart.charAt(0).toUpperCase() + namePart.slice(1)
-    );
-  }
-
-  return adjustedNameForPathArr.join(" ");
-};
-
-// Define the function
-// to screenshot the div
-const takeshot = () => {
-  let div = $("#shape").get(0);
+const takeShot = () => {
+  const shapeElement = $("#shape");
+  let shape = shapeElement.get(0);
+  const fileName = getRandomFileName() + ".png";
+  const url = shapeElement.data("url");
   // Use the html2canvas
   // function to take a screenshot
-  // and append it
-  // to the output div
-  html2canvas(div).then((canvas) => {
-    document.getElementById("output").appendChild(canvas);
+  html2canvas(shape).then((canvas) => {
+    const file = dataURLtoFile(canvas.toDataURL(), fileName);
+    let form = new FormData();
+    form.append("gift", file, fileName);
+    let settings = {
+      url: url,
+      method: "POST",
+      timeout: 0,
+      processData: false,
+      mimeType: "multipart/form-data",
+      contentType: false,
+      data: form,
+    };
+
+    $.ajax(settings).done(function (response) {
+      endPageLoading();
+      const resObject = JSON.parse(response);
+      if (resObject.success) showAlert("success", resObject.message);
+      else showAlert("error", resObject.message);
+    });
   });
+};
+
+const dataURLtoFile = (dataUrl, filename) => {
+  let arr = dataUrl.split(","),
+    mime = arr[0].match(/:(.*?);/)[1],
+    bstr = atob(arr[1]),
+    n = bstr.length,
+    u8arr = new Uint8Array(n);
+
+  while (n--) {
+    u8arr[n] = bstr.charCodeAt(n);
+  }
+
+  return new File([u8arr], filename, { type: mime });
+};
+
+const getRandomFileName = () => {
+  const timestamp = new Date().toISOString().replace(/[-:.]/g, "");
+  const random = ("" + Math.random()).substring(2, 8);
+
+  return timestamp + random;
 };
