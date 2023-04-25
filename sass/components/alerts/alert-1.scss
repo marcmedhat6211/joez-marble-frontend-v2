@@ -1,16 +1,15 @@
 .alert.alert-1 {
   position: fixed;
-  bottom: -100%;
+  top: -100%;
   left: 0;
   width: 100%;
-  height: 50px;
   background-color: transparent;
   z-index: 20;
   border-radius: 0;
   margin: 0;
-  @include transition(all 0.3s ease-in-out);
+  @include transition(all 1s ease-in-out);
   &.show {
-    bottom: 0;
+    top: 0;
   }
 
   display: flex;
@@ -20,13 +19,19 @@
     font-size: 18px;
     font-weight: 500;
     color: $color-black;
+    width: 95%;
   }
 
   .alert__btn {
-    padding: 0;
+    padding: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $color-black;
+    border-radius: 50%;
     svg {
       color: $color-black;
       width: 24px;
