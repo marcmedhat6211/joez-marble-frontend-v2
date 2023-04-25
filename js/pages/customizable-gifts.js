@@ -58,26 +58,34 @@ $(document).ready(function () {
   //================================================ END COLOR PICKER ==============================================
 
   //================================================ CHANGE THE POSITION OF THE SHAPE CONTENT USING ARROWS ==============================================
-  $("body").on("mousedown", "#shape .page-btn.move-btn", function () {
-    const shapeContent = $("#shape .shape__content.shape-text");
-    if ($(this).hasClass("up")) {
-      shapeContent.css({
-        top: `${convertCssPropertyInPxToInt(shapeContent.css("top")) - 5}px`,
-      });
-    } else if ($(this).hasClass("right")) {
-      shapeContent.css({
-        left: `${convertCssPropertyInPxToInt(shapeContent.css("left")) + 5}px`,
-      });
-    } else if ($(this).hasClass("down")) {
-      shapeContent.css({
-        top: `${convertCssPropertyInPxToInt(shapeContent.css("top")) + 5}px`,
-      });
-    } else if ($(this).hasClass("left")) {
-      shapeContent.css({
-        left: `${convertCssPropertyInPxToInt(shapeContent.css("left")) - 5}px`,
-      });
+  $("body").on(
+    "mousedown",
+    ".shape__container .page-btn.move-btn",
+    function () {
+      const shapeContent = $("#shape .shape__content.shape-text");
+      if ($(this).hasClass("up")) {
+        shapeContent.css({
+          top: `${convertCssPropertyInPxToInt(shapeContent.css("top")) - 5}px`,
+        });
+      } else if ($(this).hasClass("right")) {
+        shapeContent.css({
+          left: `${
+            convertCssPropertyInPxToInt(shapeContent.css("left")) + 5
+          }px`,
+        });
+      } else if ($(this).hasClass("down")) {
+        shapeContent.css({
+          top: `${convertCssPropertyInPxToInt(shapeContent.css("top")) + 5}px`,
+        });
+      } else if ($(this).hasClass("left")) {
+        shapeContent.css({
+          left: `${
+            convertCssPropertyInPxToInt(shapeContent.css("left")) - 5
+          }px`,
+        });
+      }
     }
-  });
+  );
   //================================================ END CHANGE THE POSITION OF THE SHAPE CONTENT USING ARROWS ==============================================
 
   //================================================ ADD ICONS TO SHAPE ==============================================
@@ -156,6 +164,12 @@ $(document).ready(function () {
     drawMarbleBg(imgPath, shapeFigureContainer);
   });
   //================================================ END HANDLE MARBLES CLICKS ==============================================
+
+  //================================================ HANDLE WHEN THE USER TRIES TO LEAVE THE PAGE ==============================================
+  $(window).bind("beforeunload", function () {
+    return "Are you sure you want to leave the page ?";
+  });
+  //================================================ END HANDLE WHEN THE USER TRIES TO LEAVE THE PAGE ==============================================
 
   //================================================ HANDLE THE PICTURE SCREENSHOT AND SEND IT TO BACKEND ==============================================
   $("body").on("click", "#submit_gift_btn", function () {

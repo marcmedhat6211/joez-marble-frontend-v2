@@ -115,66 +115,66 @@
     }
   }
 
-  #shape {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .shape__container {
     position: relative;
-    border-radius: 50%;
-    padding: 60px;
-    box-shadow: 0 4px 8px 0 rgb(0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0.19);
-    overflow: hidden;
-    margin-bottom: 30px;
-    .shape-figure__container {
-      width: 80%;
-      height: 80%;
+    #shape {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      padding: 60px;
+      box-shadow: 0 4px 8px 0 rgb(0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0.19);
       overflow: hidden;
-      position: relative;
-      #shape_figure {
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-      }
-      .shape__marble-image {
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .shape__content {
-      position: absolute;
-      top: 50%;
-      #{$start-direction}: 50%;
-      transform: translate(-50%, -50%);
-
-      &.shape-text {
-        font-size: 26px;
-        font-weight: 600;
-        z-index: 10;
-        // text-shadow: -1px -1px 1px #000;
-        // text-shadow: 2px 5px 5px rgba(255, 255, 255, 0.3);
-        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
-          0px -1px 0px rgba(0, 0, 0, 0.7);
-      }
-
-      &.shape-icon {
-        svg {
-          width: 80px;
-          height: 80px;
+      margin-bottom: 30px;
+      .shape-figure__container {
+        width: 80%;
+        height: 80%;
+        overflow: hidden;
+        position: relative;
+        #shape_figure {
+          z-index: 10;
+          width: 100%;
+          height: 100%;
         }
-        &.icon-filled {
-          svg.icon-type {
-            width: 100%;
-            height: 100%;
+        .shape__marble-image {
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .shape__content {
+        position: absolute;
+        top: 50%;
+        #{$start-direction}: 50%;
+        transform: translate(-50%, -50%);
+
+        &.shape-text {
+          font-size: 26px;
+          font-weight: 600;
+          z-index: 10;
+          // text-shadow: -1px -1px 1px #000;
+          // text-shadow: 2px 5px 5px rgba(255, 255, 255, 0.3);
+          text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+            0px -1px 0px rgba(0, 0, 0, 0.7);
+        }
+
+        &.shape-icon {
+          svg {
+            width: 80px;
+            height: 80px;
           }
-        }
-        &.number-filled {
-          svg.number-type {
-            width: 100%;
-            height: 100%;
+          &.icon-filled {
+            svg.icon-type {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &.number-filled {
+            svg.number-type {
+              width: 100%;
+              height: 100%;
+            }
           }
         }
       }
@@ -211,6 +211,16 @@
 
     &.move-btn {
       position: absolute;
+      &.up,
+      &.down {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &.right,
+      &.left {
+        top: 50%;
+        transform: translateY(-50%);
+      }
       &.up {
         top: 2px;
       }
