@@ -47,14 +47,15 @@ $(document).ready(function () {
   //================================================ END WHEN CHANGING MAIN SHAPES ==============================================
 
   //================================================ WHEN WRITING TEXT ON SHAPE ==============================================
-  $("body").on("input", ".page-block .text-block #shape_text", function () {
+  body.on("input", ".page-block .text-block #shape_text", function () {
     $("#shape .shape-text.shape__content").text($(this).val());
   });
   //================================================ END WHEN WRITING TEXT ON SHAPE ==============================================
 
   //================================================ COLOR PICKER ==============================================
-  $("#color_picker").spectrum();
-  $("#color_picker").on("move.spectrum", function (e, tinycolor) {
+  const colorPicker = $("#color_picker");
+  colorPicker.spectrum();
+  colorPicker.on("move.spectrum", function (e, tinycolor) {
     const HexColor = tinycolor.toHexString();
     $("#shape .shape-text.shape__content").css({
       color: HexColor,
@@ -63,58 +64,45 @@ $(document).ready(function () {
   //================================================ END COLOR PICKER ==============================================
 
   //================================================ CHANGE THE POSITION OF THE SHAPE CONTENT USING ARROWS ==============================================
-  $("body").on(
-    "mousedown",
-    ".shape__container .page-btn.move-btn",
-    function () {
-      const shapeContent = $("#shape .shape__content.shape-text");
-      if ($(this).hasClass("up")) {
-        shapeContent.css({
-          top: `${convertCssPropertyInPxToInt(shapeContent.css("top")) - 5}px`,
-        });
-      } else if ($(this).hasClass("right")) {
-        shapeContent.css({
-          left: `${
-            convertCssPropertyInPxToInt(shapeContent.css("left")) + 5
-          }px`,
-        });
-      } else if ($(this).hasClass("down")) {
-        shapeContent.css({
-          top: `${convertCssPropertyInPxToInt(shapeContent.css("top")) + 5}px`,
-        });
-      } else if ($(this).hasClass("left")) {
-        shapeContent.css({
-          left: `${
-            convertCssPropertyInPxToInt(shapeContent.css("left")) - 5
-          }px`,
-        });
-      }
+  body.on("mousedown", ".shape__container .page-btn.move-btn", function () {
+    const shapeContent = $("#shape .shape__content.shape-text");
+    if ($(this).hasClass("up")) {
+      shapeContent.css({
+        top: `${convertCssPropertyInPxToInt(shapeContent.css("top")) - 5}px`,
+      });
+    } else if ($(this).hasClass("right")) {
+      shapeContent.css({
+        left: `${convertCssPropertyInPxToInt(shapeContent.css("left")) + 5}px`,
+      });
+    } else if ($(this).hasClass("down")) {
+      shapeContent.css({
+        top: `${convertCssPropertyInPxToInt(shapeContent.css("top")) + 5}px`,
+      });
+    } else if ($(this).hasClass("left")) {
+      shapeContent.css({
+        left: `${convertCssPropertyInPxToInt(shapeContent.css("left")) - 5}px`,
+      });
     }
-  );
+  });
   //================================================ END CHANGE THE POSITION OF THE SHAPE CONTENT USING ARROWS ==============================================
 
   //================================================ ADD ICONS TO SHAPE ==============================================
-  $("body").on(
-    "click",
-    "#icons_block .icon, #numbers_block .icon",
-    function () {
-      const icon = $(this);
-      const path = icon.attr("id");
-      const clicked = $(this);
-      console.log(clicked);
-      $("#shape .shape__content.shape-icon").empty();
-      drawIcon(
-        path,
-        $("#shape .shape__content.shape-icon"),
-        clicked.hasClass("icon-type") ? "icon" : "number"
-      );
-      convertSvgToIcon($("#shape .shape__content.shape-icon i"));
-    }
-  );
+  body.on("click", "#icons_block .icon, #numbers_block .icon", function () {
+    const icon = $(this);
+    const path = icon.attr("id");
+    const clicked = $(this);
+    $("#shape .shape__content.shape-icon").empty();
+    drawIcon(
+      path,
+      $("#shape .shape__content.shape-icon"),
+      clicked.hasClass("icon-type") ? "icon" : "number"
+    );
+    convertSvgToIcon($("#shape .shape__content.shape-icon i"));
+  });
   //================================================ END ADD ICONS TO SHAPE ==============================================
 
   //================================================ FILL ICONS IN SHAPE ==============================================
-  $("body").on("change", "#fill_shape", function () {
+  body.on("change", "#fill_shape", function () {
     if ($(this).is(":checked")) {
       $("#shape .shape__content.shape-icon")
         .removeClass("number-type")
@@ -124,7 +112,7 @@ $(document).ready(function () {
     }
   });
 
-  $("body").on("change", "#fill_shape_numbers", function () {
+  body.on("change", "#fill_shape_numbers", function () {
     if ($(this).is(":checked")) {
       $("#shape .shape__content.shape-icon")
         .removeClass("icon-type")
@@ -164,7 +152,7 @@ $(document).ready(function () {
   //================================================ END ADD DEFAULT MARBLE BG AT PAGE START ==============================================
 
   //================================================ HANDLE MARBLES CLICKS ==============================================
-  $("body").on("click", "#marbles_slider .marble-container", function () {
+  body.on("click", "#marbles_slider .marble-container", function () {
     $("#marbles_slider .marble-container").not($(this)).removeClass("active");
     $(this).addClass("active");
     const imgPath = $(this).data("src");
@@ -179,7 +167,7 @@ $(document).ready(function () {
   //================================================ END HANDLE WHEN THE USER TRIES TO LEAVE THE PAGE ==============================================
 
   //================================================ HANDLE THE PICTURE SCREENSHOT AND SEND IT TO BACKEND ==============================================
-  $("body").on("click", "#submit_gift_btn", function () {
+  body.on("click", "#submit_gift_btn", function () {
     if (
       window.confirm(
         "Are you sure this is the last gift's state that you want to submit ?"
@@ -221,8 +209,18 @@ const drawIcon = (iconPath, destinationContainer, iconType) => {
 };
 
 const connectMarbleImgToSvg = (imgPath) => {
+  const img = $("<img>")
+    .attr({
+      src: imgPath,
+      id: "virtual_img",
+    })
+    .css("display", "none");
+  img.appendTo(body);
+  let virtualImg = $("#virtual_img");
   const shapeFigureContainer = $(".shape-figure__container");
-  shapeFigureContainer.find("svg image").attr("href", imgPath);
+  const base64Image = getBase64Image(virtualImg.get(0));
+  shapeFigureContainer.find("svg image").attr("href", base64Image);
+  virtualImg.remove();
 };
 
 const takeShot = () => {
@@ -230,9 +228,13 @@ const takeShot = () => {
   let shape = shapeElement.get(0);
   const fileName = getRandomFileName() + ".png";
   const url = shapeElement.data("url");
-  // Use the html2canvas
-  // function to take a screenshot
-  html2canvas(shape).then((canvas) => {
+
+  html2canvas(shape, {
+    logging: true,
+    letterRendering: 1,
+    allowTaint: false,
+    useCORS: true,
+  }).then((canvas) => {
     const file = dataURLtoFile(canvas.toDataURL(), fileName);
     let form = new FormData();
     form.append("gift", file, fileName);
@@ -253,6 +255,17 @@ const takeShot = () => {
       else showAlert("error", resObject.message);
     });
   });
+};
+
+const getBase64Image = (image) => {
+  let canvas = document.createElement("canvas");
+  canvas.width = image.width;
+  canvas.height = image.height;
+  let ctx = canvas.getContext("2d");
+  ctx.drawImage(image, 0, 0);
+  return canvas.toDataURL();
+  // console.log(canvas.toDataURL())
+  // return dataURL.replace(/^data:image\/?[A-z]*;base64,/);
 };
 
 const dataURLtoFile = (dataUrl, filename) => {
