@@ -264,8 +264,6 @@ const getBase64Image = (image) => {
   let ctx = canvas.getContext("2d");
   ctx.drawImage(image, 0, 0);
   return canvas.toDataURL();
-  // console.log(canvas.toDataURL())
-  // return dataURL.replace(/^data:image\/?[A-z]*;base64,/);
 };
 
 const dataURLtoFile = (dataUrl, filename) => {
