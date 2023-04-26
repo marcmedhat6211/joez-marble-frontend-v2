@@ -367,7 +367,7 @@ header {
         }
         .desktop-logo-container {
           width: 280px;
-          height: 100px;
+          height: 120px;
           position: relative;
           #{$start-direction}: 4%;
           @include transform(translateX(-50% * $transform-direction));
